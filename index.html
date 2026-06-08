@@ -1354,6 +1354,277 @@ const DICTIONARY = {
   안내: "guide / information"
 };
 
+Object.assign(DICTIONARY, {
+  가게: "store / shop",
+  가게에서: "at the store",
+  가격: "price",
+  가깝다: "to be close",
+  가까워요: "is close",
+  가족: "family",
+  갈까요: "shall we go?",
+  감기에: "for a cold",
+  강아지: "puppy / dog",
+  같이가요: "let's go together",
+  같이먹어요: "let's eat together",
+  걷다: "to walk",
+  걸려요: "takes time",
+  게임: "game",
+  고기: "meat",
+  고르세요: "please choose",
+  곳: "place",
+  과일: "fruit",
+  구두: "dress shoes",
+  그래서: "so / therefore",
+  그런데: "but / however",
+  그리고: "and",
+  근처: "nearby",
+  기념품: "souvenir",
+  기분: "mood / feeling",
+  끝난: "finished",
+  끝나요: "finishes",
+  나중에: "later",
+  날씨: "weather",
+  냉면: "cold noodles",
+  너무: "too / very",
+  늦게: "late",
+  다녀요: "attend / go regularly",
+  다음: "next",
+  달: "month",
+  닭갈비: "spicy stir-fried chicken",
+  대학교: "university",
+  도착해요: "arrive",
+  동생: "younger sibling",
+  동물: "animal",
+  동아리: "club / society",
+  두: "two",
+  드라마: "drama",
+  들어요: "listen / hear",
+  등산: "hiking",
+  등산을: "hiking",
+  따뜻한: "warm",
+  때문에: "because of",
+  라면: "ramyeon",
+  마시고: "drink and",
+  마실: "will drink",
+  만나다: "to meet",
+  만나려고: "intend to meet",
+  만날: "will meet",
+  매일: "every day",
+  매주: "every week",
+  몇: "how many / what",
+  명: "people counter",
+  모임: "gathering / meeting",
+  목요일에: "on Thursday",
+  못: "cannot",
+  무겁다: "to be heavy",
+  미안해요: "sorry",
+  바빠요: "busy",
+  바빴어요: "was busy",
+  반: "class",
+  반지: "ring",
+  배워요: "learn",
+  버스정류장은: "bus stop + topic marker",
+  벌써: "already",
+  봐요: "watch / see",
+  봤어요: "watched / saw",
+  부엌: "kitchen",
+  분식집: "snack restaurant",
+  비: "rain",
+  비가: "rain + subject marker",
+  빌렸어요: "borrowed",
+  빨라요: "fast",
+  사무실: "office",
+  산책: "walk / stroll",
+  산책해요: "take a walk",
+  살: "will buy",
+  새: "new",
+  생선: "fish",
+  서점에서: "at the bookstore",
+  선생님: "teacher",
+  쉬고: "rest and",
+  쉬어요: "rest",
+  시: "o'clock",
+  시험: "exam",
+  시험이: "exam + subject marker",
+  시청: "city hall",
+  신어요: "wear shoes",
+  씻고: "wash and",
+  아기: "baby",
+  아버지: "father",
+  아이스크림: "ice cream",
+  안경: "glasses",
+  앉아요: "sit",
+  알맞은: "appropriate / correct",
+  앞에서: "in front of",
+  약속: "appointment / plan",
+  약속이: "appointment + subject marker",
+  어머니: "mother",
+  언제: "when",
+  여권: "passport",
+  열심히: "diligently",
+  영화: "movie",
+  영화표: "movie ticket",
+  오빠: "older brother (female speaker)",
+  오후: "afternoon / p.m.",
+  올: "will come",
+  와요: "come",
+  왔어요: "came",
+  요즘: "these days",
+  우체국: "post office",
+  운전: "driving",
+  운동장: "sports field",
+  월: "month",
+  음악: "music",
+  이따가: "later today / soon",
+  이름: "name",
+  이야기: "story / talk",
+  일: "work / day",
+  일이: "work + subject marker",
+  읽어요: "read",
+  일어나요: "wake up",
+  입어요: "wear clothes",
+  작지만: "small but",
+  잘: "well",
+  잡니다: "sleep (formal)",
+  저녁마다: "every evening",
+  전화: "phone call",
+  전화해요: "call by phone",
+  점심: "lunch",
+  정류장: "stop / station",
+  조용해요: "quiet",
+  좋아서: "because it is good / because I like it",
+  주려고: "intend to give",
+  준비해요: "prepare",
+  중국어: "Chinese language",
+  지하철역: "subway station",
+  지하철역에서: "at the subway station",
+  질문: "question",
+  책: "book",
+  청소: "cleaning",
+  청소를: "cleaning",
+  청소해요: "clean",
+  초밥: "sushi",
+  축구: "soccer",
+  출근해요: "go to work",
+  춤: "dance",
+  커서: "because it is big",
+  컴퓨터: "computer",
+  테니스: "tennis",
+  편지: "letter",
+  피곤해요: "tired",
+  필요해요: "need",
+  하숙집: "boarding house",
+  한복: "hanbok",
+  할머니: "grandmother",
+  햄버거: "hamburger",
+  형: "older brother (male speaker)",
+  화장품: "cosmetics",
+  회의: "meeting",
+  흐엉: "Huong (name)"
+});
+
+const PARTICLE_TRANSLATIONS = {
+  은: "topic marker",
+  는: "topic marker",
+  이: "subject marker",
+  가: "subject marker",
+  을: "object marker",
+  를: "object marker",
+  에: "to / at / time marker",
+  에서: "at / from; action location",
+  에게: "to someone",
+  한테: "to someone (spoken)",
+  께: "to someone honorifically",
+  으로: "by / toward / with",
+  로: "by / toward / with",
+  까지: "until / up to / as far as",
+  부터: "from / starting at",
+  보다: "than; comparison marker",
+  하고: "and / with",
+  와: "and / with",
+  과: "and / with",
+  도: "also / too",
+  만: "only"
+};
+
+const ENDING_TRANSLATIONS = {
+  "을 거예요": "future plan: will / going to",
+  "ㄹ 거예요": "future plan: will / going to",
+  거예요: "future plan or copula ending",
+  이에요: "is / am / are after consonant",
+  예요: "is / am / are after vowel",
+  했어요: "did; past polite",
+  였어요: "was; past copula",
+  이었어요: "was; past copula",
+  았어요: "past polite ending",
+  었어요: "past polite ending",
+  해요: "do; polite present",
+  아요: "polite present ending",
+  어요: "polite present ending",
+  고: "and / then; connector",
+  아서: "because / so; sequence connector",
+  어서: "because / so; sequence connector",
+  해서: "because / so; do and",
+  지만: "but / although",
+  으니까: "because / since",
+  니까: "because / since",
+  으려고: "in order to / intending to",
+  려고: "in order to / intending to",
+  으러: "in order to go/do",
+  러: "in order to go/do",
+  세요: "please do / honorific command",
+  으세요: "please do / honorific command",
+  아야: "must / have to",
+  어야: "must / have to",
+  지: "nominal or connecting ending",
+  지요: "right? / tag question",
+  네요: "expresses realization",
+  군요: "expresses realization"
+};
+
+const STEM_TRANSLATIONS = {
+  가: "go",
+  오: "come",
+  먹: "eat",
+  마시: "drink",
+  사: "buy",
+  보: "see / watch",
+  하: "do",
+  공부하: "study",
+  운동하: "exercise",
+  여행하: "travel",
+  쉬: "rest",
+  듣: "listen",
+  읽: "read",
+  입: "wear clothes",
+  신: "wear shoes",
+  앉: "sit",
+  만나: "meet",
+  만들: "make",
+  배우: "learn",
+  받: "receive",
+  주: "give",
+  타: "ride / take",
+  걷: "walk",
+  살: "live",
+  찾: "look for / find",
+  주문하: "order",
+  전화하: "call",
+  청소하: "clean",
+  준비하: "prepare",
+  아프: "hurt / be sick",
+  바쁘: "be busy",
+  좋: "be good / like",
+  많: "be many",
+  작: "be small",
+  크: "be big",
+  길: "be long",
+  싸: "be cheap",
+  비싸: "be expensive",
+  피곤하: "be tired",
+  필요하: "need"
+};
+
 const LISTENING_QUESTIONS = [
   {
     id: "l1",
@@ -1736,6 +2007,754 @@ const READING_QUESTIONS = [
   }
 ];
 
+const LISTENING_VARIANT_ITEMS = [
+  {
+    slot: 1,
+    id: "l1b",
+    type: "picture",
+    group: "[1~3] 다음을 듣고 <보기>와 같이 알맞은 그림을 고르세요. (각 3점)",
+    example: "남자: 의자예요.",
+    prompt: "1.",
+    audio: "가방이에요.",
+    answer: 3,
+    options: [
+      { text: "의자", image: "chair" },
+      { text: "책상", image: "desk" },
+      { text: "펜", image: "pen" },
+      { text: "가방", image: "bag" }
+    ],
+    explain: "가방이에요 means 'It is a bag.'"
+  },
+  {
+    slot: 1,
+    id: "l1c",
+    type: "picture",
+    group: "[1~3] 다음을 듣고 <보기>와 같이 알맞은 그림을 고르세요. (각 3점)",
+    example: "남자: 의자예요.",
+    prompt: "1.",
+    audio: "펜이에요.",
+    answer: 2,
+    options: [
+      { text: "의자", image: "chair" },
+      { text: "책상", image: "desk" },
+      { text: "펜", image: "pen" },
+      { text: "가방", image: "bag" }
+    ],
+    explain: "펜이에요 means 'It is a pen.'"
+  },
+  {
+    slot: 2,
+    id: "l2b",
+    type: "picture",
+    prompt: "2.",
+    audio: "저는 회사에 걸어서 가요.",
+    answer: 1,
+    options: [
+      { text: "자전거", image: "bike" },
+      { text: "걸어가요", image: "walk" },
+      { text: "자동차", image: "car" },
+      { text: "택시", image: "taxi" }
+    ],
+    explain: "걸어서 가요 means the person goes on foot."
+  },
+  {
+    slot: 2,
+    id: "l2c",
+    type: "picture",
+    prompt: "2.",
+    audio: "수진 씨는 택시를 타고 병원에 가요.",
+    answer: 3,
+    options: [
+      { text: "자전거", image: "bike" },
+      { text: "걸어가요", image: "walk" },
+      { text: "자동차", image: "car" },
+      { text: "택시", image: "taxi" }
+    ],
+    explain: "택시를 타고 means she takes a taxi."
+  },
+  {
+    slot: 3,
+    id: "l3b",
+    type: "picture",
+    prompt: "3.",
+    audio: "민수 씨는 저녁에 노래를 불러요.",
+    answer: 1,
+    options: [
+      { text: "뛰어요", image: "run" },
+      { text: "노래해요", image: "sing" },
+      { text: "물을 마셔요", image: "drink" },
+      { text: "쉬어요", image: "sleep" }
+    ],
+    explain: "노래를 불러요 means 'sings a song.'"
+  },
+  {
+    slot: 3,
+    id: "l3c",
+    type: "picture",
+    prompt: "3.",
+    audio: "동생은 피곤해서 쉬어요.",
+    answer: 3,
+    options: [
+      { text: "뛰어요", image: "run" },
+      { text: "노래해요", image: "sing" },
+      { text: "물을 마셔요", image: "drink" },
+      { text: "쉬어요", image: "sleep" }
+    ],
+    explain: "피곤해서 쉬어요 means the person rests because they are tired."
+  },
+  {
+    slot: 4,
+    id: "l4b",
+    type: "choice",
+    group: "[4~9] 다음을 듣고 <보기>와 같이 이어질 말로 알맞은 말을 고르세요. (각 3점)",
+    example: "남자: 물 있어요?\n여자: ________\n① 네, 있어요. ② 아니요. 비싸요. ③ 네, 물을 사요. ④ 아니요. 오백 원이에요.",
+    prompt: "4.",
+    audio: "오늘 저녁에 같이 밥을 먹을까요?",
+    question: "알맞은 대답을 고르세요.",
+    answer: 0,
+    options: ["네, 좋아요. 같이 먹어요.", "아니요. 밥이 작아요.", "네, 밥을 샀어요.", "아니요. 식당이 있어요."],
+    explain: "먹을까요 asks about eating together, so accepting the invitation fits."
+  },
+  {
+    slot: 4,
+    id: "l4c",
+    type: "choice",
+    group: "[4~9] 다음을 듣고 <보기>와 같이 이어질 말로 알맞은 말을 고르세요. (각 3점)",
+    example: "남자: 물 있어요?\n여자: ________\n① 네, 있어요. ② 아니요. 비싸요. ③ 네, 물을 사요. ④ 아니요. 오백 원이에요.",
+    prompt: "4.",
+    audio: "내일 도서관에서 같이 공부할까요?",
+    question: "알맞은 대답을 고르세요.",
+    answer: 2,
+    options: ["도서관은 커요.", "어제 공부했어요.", "네, 좋아요. 같이 공부해요.", "아니요. 책을 읽어요."],
+    explain: "The question is an invitation to study together tomorrow."
+  },
+  {
+    slot: 5,
+    id: "l5b",
+    type: "choice",
+    prompt: "5.",
+    audio: "지하철역까지 어떻게 가요?",
+    question: "알맞은 대답을 고르세요.",
+    answer: 1,
+    options: ["네, 지하철을 타요.", "저기에서 왼쪽으로 돌아가세요.", "아니요. 역이 없어요.", "지하철역에서 만났어요."],
+    explain: "어떻게 가요 asks for directions, so 왼쪽으로 돌아가세요 fits."
+  },
+  {
+    slot: 5,
+    id: "l5c",
+    type: "choice",
+    prompt: "5.",
+    audio: "약국은 어디에 있어요?",
+    question: "알맞은 대답을 고르세요.",
+    answer: 3,
+    options: ["약을 먹었어요.", "아니요. 아파요.", "네, 약국이에요.", "은행 옆에 있어요."],
+    explain: "어디에 있어요 asks for location."
+  },
+  {
+    slot: 6,
+    id: "l6b",
+    type: "choice",
+    prompt: "6.",
+    audio: "오늘 날씨가 추워요. 따뜻한 차 있어요?",
+    question: "알맞은 대답을 고르세요.",
+    answer: 0,
+    options: ["네, 있어요. 드세요.", "아니요. 차가 빨라요.", "네, 차를 타요.", "따뜻해서 못 마셔요."],
+    explain: "The question asks if warm tea is available."
+  },
+  {
+    slot: 6,
+    id: "l6c",
+    type: "choice",
+    prompt: "6.",
+    audio: "가방이 너무 무거워요. 도와줄 수 있어요?",
+    question: "알맞은 대답을 고르세요.",
+    answer: 2,
+    options: ["가방은 예뻐요.", "아니요. 무거웠어요.", "네, 도와줄게요.", "도서관에 가려고 해요."],
+    explain: "The speaker asks for help, so 네, 도와줄게요 is natural."
+  },
+  {
+    slot: 7,
+    id: "l7b",
+    type: "choice",
+    group: "[7~8] 무엇에 대한 이야기예요? <보기>와 같이 알맞은 것을 고르세요. (각 3점)",
+    example: "오늘은 수요일이에요. 그리고 내일은 목요일이에요.\n① 장소 ② 생일 ③ 친구 ④ 요일",
+    prompt: "7.",
+    audio: "형 생일이에요. 백화점에서 지갑하고 모자를 샀어요.",
+    question: "무엇에 대한 이야기예요?",
+    answer: 3,
+    options: ["건강", "음식", "휴가", "선물"],
+    explain: "지갑하고 모자를 샀어요 for a birthday points to gifts."
+  },
+  {
+    slot: 7,
+    id: "l7c",
+    type: "choice",
+    group: "[7~8] 무엇에 대한 이야기예요? <보기>와 같이 알맞은 것을 고르세요. (각 3점)",
+    example: "오늘은 수요일이에요. 그리고 내일은 목요일이에요.\n① 장소 ② 생일 ③ 친구 ④ 요일",
+    prompt: "7.",
+    audio: "목이 아파서 병원에 갔어요. 그리고 약국에서 약을 샀어요.",
+    question: "무엇에 대한 이야기예요?",
+    answer: 0,
+    options: ["건강", "음식", "휴가", "선물"],
+    explain: "병원 and 약 are health-related."
+  },
+  {
+    slot: 8,
+    id: "l8b",
+    type: "choice",
+    prompt: "8.",
+    audio: "토요일에 친구들하고 시장에 가요. 거기에서 옷하고 신발을 살 거예요.",
+    question: "무엇에 대한 이야기예요?",
+    answer: 2,
+    options: ["모임", "교통", "쇼핑", "여행"],
+    explain: "옷하고 신발을 살 거예요 means shopping."
+  },
+  {
+    slot: 8,
+    id: "l8c",
+    type: "choice",
+    prompt: "8.",
+    audio: "주말에 부산에 가요. 기차를 타고 가서 바다를 구경할 거예요.",
+    question: "무엇에 대한 이야기예요?",
+    answer: 3,
+    options: ["모임", "교통", "쇼핑", "여행"],
+    explain: "Going to Busan and sightseeing is travel."
+  },
+  {
+    slot: 9,
+    id: "l9b",
+    type: "choice",
+    group: "[9~11] 다음을 듣고 <보기>와 같이 물음에 답하세요. (각 3점)",
+    example: "이 사람은 무엇을 먹었어요?\n어제 수진 씨를 만났어요. 밥을 먹었어요.\n① 밥 ② 펜 ③ 시계 ④ 바나나",
+    prompt: "9.",
+    audio: "저는 매주 화요일하고 목요일에 한국어를 공부해요. 토요일에는 친구하고 축구를 해요.",
+    question: "이 사람은 무슨 요일에 축구를 해요?",
+    answer: 2,
+    options: ["화요일", "목요일", "토요일", "일요일"],
+    explain: "토요일에는 친구하고 축구를 해요 gives Saturday."
+  },
+  {
+    slot: 9,
+    id: "l9c",
+    type: "choice",
+    group: "[9~11] 다음을 듣고 <보기>와 같이 물음에 답하세요. (각 3점)",
+    example: "이 사람은 무엇을 먹었어요?\n어제 수진 씨를 만났어요. 밥을 먹었어요.\n① 밥 ② 펜 ③ 시계 ④ 바나나",
+    prompt: "9.",
+    audio: "저는 월요일부터 목요일까지 회사에 가요. 금요일 저녁에는 동아리 모임에 가요.",
+    question: "이 사람은 언제 동아리 모임에 가요?",
+    answer: 1,
+    options: ["월요일 아침", "금요일 저녁", "토요일 오후", "일요일 아침"],
+    explain: "금요일 저녁에 동아리 모임에 가요 gives the time."
+  },
+  {
+    slot: 10,
+    id: "l10b",
+    type: "choice",
+    prompt: "10.",
+    audio: "수진 씨는 집에서 학교까지 버스를 타고 가요. 학교에서 회사까지 지하철을 타고 가요.",
+    question: "수진 씨는 학교에서 회사까지 무엇을 타고 가요?",
+    answer: 2,
+    options: ["버스", "택시", "지하철", "자전거"],
+    explain: "학교에서 회사까지 지하철을 타고 가요 names the subway."
+  },
+  {
+    slot: 10,
+    id: "l10c",
+    type: "choice",
+    prompt: "10.",
+    audio: "민수 씨는 회사에 자전거를 타고 가요. 일이 끝난 후에는 버스를 타고 세종학당에 가요.",
+    question: "민수 씨는 회사에서 세종학당까지 무엇을 타고 가요?",
+    answer: 0,
+    options: ["버스", "택시", "지하철", "자전거"],
+    explain: "버스를 타고 세종학당에 가요 gives the bus."
+  },
+  {
+    slot: 11,
+    id: "l11b",
+    type: "picture",
+    prompt: "11.",
+    audio: "두 사람은 은행 앞에 있어요. 세종학당은 은행 왼쪽에 있어요.",
+    question: "알맞은 그림을 고르세요.",
+    answer: 0,
+    options: [
+      { text: "세종학당은 은행 왼쪽에 있어요.", image: "map-left" },
+      { text: "세종학당은 은행 오른쪽에 있어요.", image: "map-right" },
+      { text: "은행은 세종학당 뒤에 있어요.", image: "map-top" },
+      { text: "은행은 세종학당 앞에 있어요.", image: "map-bottom" }
+    ],
+    explain: "The school should be to the left of the bank."
+  },
+  {
+    slot: 11,
+    id: "l11c",
+    type: "picture",
+    prompt: "11.",
+    audio: "은행은 위에 있어요. 세종학당은 아래에 있어요.",
+    question: "알맞은 그림을 고르세요.",
+    answer: 3,
+    options: [
+      { text: "세종학당은 은행 왼쪽에 있어요.", image: "map-left" },
+      { text: "세종학당은 은행 오른쪽에 있어요.", image: "map-right" },
+      { text: "은행은 세종학당 뒤에 있어요.", image: "map-top" },
+      { text: "은행은 세종학당 위에 있어요.", image: "map-bottom" }
+    ],
+    explain: "은행은 위에 있고 세종학당은 아래에 있어요 matches the bottom map."
+  },
+  {
+    slot: 12,
+    id: "l12b",
+    type: "choice",
+    group: "[12~13] 다음을 듣고 <보기>와 같이 질문에 알맞은 대답을 고르세요. (각 3점)",
+    example: "남자: 수진 씨, 집에 가요?\n여자: 네. 집에 가요.\n수진 씨는 어디에 가요?\n① 집 ② 학교 ③ 식당 ④ 공원",
+    prompt: "12.",
+    audio: "남자: 수진 씨, 어디에 가요? 여자: 식당에 가요. 친구를 만나서 점심을 먹을 거예요.",
+    question: "수진 씨는 어디에 가요?",
+    answer: 2,
+    options: ["집", "학교", "식당", "공원"],
+    explain: "식당에 가요 gives the destination."
+  },
+  {
+    slot: 12,
+    id: "l12c",
+    type: "choice",
+    group: "[12~13] 다음을 듣고 <보기>와 같이 질문에 알맞은 대답을 고르세요. (각 3점)",
+    example: "남자: 수진 씨, 집에 가요?\n여자: 네. 집에 가요.\n수진 씨는 어디에 가요?\n① 집 ② 학교 ③ 식당 ④ 공원",
+    prompt: "12.",
+    audio: "남자: 민수 씨, 어디에 가요? 여자: 공원에 가요. 산책하려고 해요.",
+    question: "민수 씨는 어디에 가요?",
+    answer: 3,
+    options: ["집", "학교", "식당", "공원"],
+    explain: "공원에 가요 gives the park."
+  },
+  {
+    slot: 13,
+    id: "l13b",
+    type: "choice",
+    prompt: "13.",
+    audio: "남자: 백화점에서 무엇을 샀어요? 여자: 신발이 예뻐서 신발을 샀어요.",
+    question: "여자는 백화점에서 무엇을 샀어요?",
+    answer: 1,
+    options: ["안경", "신발", "모자", "화장품"],
+    explain: "신발을 샀어요 means she bought shoes."
+  },
+  {
+    slot: 13,
+    id: "l13c",
+    type: "choice",
+    prompt: "13.",
+    audio: "남자: 시장에서 무엇을 샀어요? 여자: 가방이 싸서 가방을 샀어요.",
+    question: "여자는 시장에서 무엇을 샀어요?",
+    answer: 3,
+    options: ["안경", "신발", "모자", "가방"],
+    explain: "가방을 샀어요 means she bought a bag."
+  },
+  {
+    slot: 14,
+    id: "l14b",
+    type: "choice",
+    group: "[14~15] 다음을 듣고 <보기>와 같이 들은 내용과 같은 것을 고르세요. (각 5점)",
+    example: "남자: 어제 수진 씨를 만났어요?\n여자: 네. 같이 밥을 먹었어요.\n① 남자는 식당에 갔어요. ② 여자는 수진 씨를 만났어요. ③ 남자는 수진 씨를 좋아해요. ④ 여자는 수진 씨와 같이 왔어요.",
+    prompt: "14.",
+    audio: "여자: 주말에 친구하고 영화관에 갔어요. 영화가 재미있었어요. 다음 주에는 미술관에 갈 거예요.",
+    question: "들은 내용과 같은 것을 고르세요.",
+    answer: 3,
+    options: ["여자는 혼자 영화관에 갔어요.", "여자는 영화가 재미없었어요.", "여자는 어제 미술관에 갔어요.", "여자는 다음 주에 미술관에 갈 거예요."],
+    explain: "다음 주에는 미술관에 갈 거예요 directly matches option 4."
+  },
+  {
+    slot: 14,
+    id: "l14c",
+    type: "choice",
+    group: "[14~15] 다음을 듣고 <보기>와 같이 들은 내용과 같은 것을 고르세요. (각 5점)",
+    example: "남자: 어제 수진 씨를 만났어요?\n여자: 네. 같이 밥을 먹었어요.\n① 남자는 식당에 갔어요. ② 여자는 수진 씨를 만났어요. ③ 남자는 수진 씨를 좋아해요. ④ 여자는 수진 씨와 같이 왔어요.",
+    prompt: "14.",
+    audio: "남자: 오늘은 제 생일이에요. 가족하고 집에서 밥을 먹었어요. 동생에게 책을 받았어요.",
+    question: "들은 내용과 같은 것을 고르세요.",
+    answer: 1,
+    options: ["남자는 친구하고 식당에 갔어요.", "남자는 동생에게 책을 받았어요.", "남자는 내일 생일이에요.", "남자는 가족에게 모자를 줬어요."],
+    explain: "동생에게 책을 받았어요 directly matches option 2."
+  },
+  {
+    slot: 15,
+    id: "l15b",
+    type: "choice",
+    prompt: "15.",
+    audio: "여자: 어제 배가 아파서 병원에 갔어요. 오늘은 괜찮아요. 하지만 매운 음식은 못 먹어요.",
+    question: "들은 내용과 같은 것을 고르세요.",
+    answer: 2,
+    options: ["여자는 오늘 병원에 갔어요.", "여자는 매운 음식을 잘 먹어요.", "여자는 어제 배가 아팠어요.", "여자는 오늘도 많이 아파요."],
+    explain: "어제 배가 아파서 병원에 갔어요 matches option 3."
+  },
+  {
+    slot: 15,
+    id: "l15c",
+    type: "choice",
+    prompt: "15.",
+    audio: "남자: 이번 주는 일이 많아서 바빴어요. 토요일에는 집에서 쉬고 일요일에는 친구를 만날 거예요.",
+    question: "들은 내용과 같은 것을 고르세요.",
+    answer: 3,
+    options: ["남자는 이번 주에 일이 없었어요.", "남자는 토요일에 친구를 만날 거예요.", "남자는 일요일에 회사에 갈 거예요.", "남자는 토요일에 집에서 쉴 거예요."],
+    explain: "토요일에는 집에서 쉬고 matches option 4."
+  }
+];
+
+const READING_VARIANT_ITEMS = [
+  {
+    slot: 1,
+    id: "r1b",
+    type: "choice",
+    group: "[1~3] <보기>와 같이 (   )에 들어갈 가장 알맞은 것을 고르세요. (각 3점)",
+    example: "(     )을 먹어요.\n① 펜 ② 빵 ③ 책상 ④ 선물",
+    prompt: "1.",
+    question: "배가 아파요. 그래서 (     )에 갔어요.",
+    answer: 2,
+    options: ["은행", "서점", "병원", "공원"],
+    explain: "배가 아파요 points to 병원."
+  },
+  {
+    slot: 1,
+    id: "r1c",
+    type: "choice",
+    group: "[1~3] <보기>와 같이 (   )에 들어갈 가장 알맞은 것을 고르세요. (각 3점)",
+    example: "(     )을 먹어요.\n① 펜 ② 빵 ③ 책상 ④ 선물",
+    prompt: "1.",
+    question: "친구 생일이에요. 그래서 (     )을 샀어요.",
+    answer: 3,
+    options: ["약", "버스", "병원", "선물"],
+    explain: "Birthday context points to a gift."
+  },
+  {
+    slot: 2,
+    id: "r2b",
+    type: "choice",
+    prompt: "2.",
+    question: "저는 아침에 커피를 자주 (     ).",
+    answer: 1,
+    options: ["타요", "마셔요", "입어요", "앉아요"],
+    explain: "커피를 마셔요 means drink coffee."
+  },
+  {
+    slot: 2,
+    id: "r2c",
+    type: "choice",
+    prompt: "2.",
+    question: "비가 와요. 우산을 (     ).",
+    answer: 2,
+    options: ["먹어요", "마셔요", "사려고 해요", "듣고 있어요"],
+    explain: "사려고 해요 expresses intending to buy an umbrella."
+  },
+  {
+    slot: 3,
+    id: "r3b",
+    type: "choice",
+    prompt: "3.",
+    question: "이 신발이 너무 (     ). 그래서 안 살 거예요.",
+    answer: 3,
+    options: ["가까워요", "재미있어요", "짧아요", "비싸요"],
+    explain: "Too expensive explains not buying."
+  },
+  {
+    slot: 3,
+    id: "r3c",
+    type: "choice",
+    prompt: "3.",
+    question: "오늘은 일이 많아요. 그래서 조금 (     ).",
+    answer: 0,
+    options: ["바빠요", "싸요", "작아요", "매워요"],
+    explain: "일이 많아요 leads to 바빠요."
+  },
+  {
+    slot: 4,
+    id: "r4b",
+    type: "choice",
+    group: "[4~6] <보기>와 같이 (   )에 알맞은 것을 고르세요. (각 3점)",
+    example: "밥(     ) 먹어요.\n① 이 ② 을 ③ 에게 ④ 까지",
+    prompt: "4.",
+    question: "김치찌개는 맛있어요. (     ) 매워서 조금만 먹었어요.",
+    answer: 2,
+    options: ["그리고", "그래서", "하지만", "부터"],
+    explain: "하지만 contrasts delicious with spicy."
+  },
+  {
+    slot: 4,
+    id: "r4c",
+    type: "choice",
+    group: "[4~6] <보기>와 같이 (   )에 알맞은 것을 고르세요. (각 3점)",
+    example: "밥(     ) 먹어요.\n① 이 ② 을 ③ 에게 ④ 까지",
+    prompt: "4.",
+    question: "시장보다 백화점이 더 (     ) 시장에 자주 가요.",
+    answer: 1,
+    options: ["비싸고", "비싸서", "비싸지만", "비싸려고"],
+    explain: "비싸서 gives the reason."
+  },
+  {
+    slot: 5,
+    id: "r5b",
+    type: "choice",
+    prompt: "5.",
+    question: "가: 약국까지 어떻게 가요?\n나: 저기에서 왼쪽(     ) 돌아가세요.",
+    answer: 0,
+    options: ["으로", "에서", "보다", "한테"],
+    explain: "Direction uses 으로/로."
+  },
+  {
+    slot: 5,
+    id: "r5c",
+    type: "choice",
+    prompt: "5.",
+    question: "집에서 학교(     ) 버스를 타고 가요.",
+    answer: 3,
+    options: ["보다", "에게", "하고", "까지"],
+    explain: "까지 means up to/as far as a destination."
+  },
+  {
+    slot: 6,
+    id: "r6b",
+    type: "choice",
+    prompt: "6.",
+    question: "친구에게 생일 선물을 (     ).",
+    answer: 1,
+    options: ["받으려고 해요", "주려고 해요", "타려고 해요", "쉬려고 해요"],
+    explain: "친구에게 means to a friend, so 주려고 해요 fits."
+  },
+  {
+    slot: 6,
+    id: "r6c",
+    type: "choice",
+    prompt: "6.",
+    question: "주말에 산책(     ) 공원에 가요.",
+    answer: 2,
+    options: ["보다", "까지", "하러", "에게"],
+    explain: "하러 가요 means go in order to do something."
+  },
+  {
+    slot: 7,
+    id: "r7b",
+    type: "choice",
+    group: "[7~8] 무엇에 대한 이야기예요? <보기>와 같이 알맞은 것을 고르세요. (각 3점)",
+    example: "오늘은 수요일이에요. 그리고 내일은 목요일이에요.\n① 장소 ② 생일 ③ 친구 ④ 요일",
+    prompt: "7.",
+    question: "오빠 생일이에요. 오빠에게 새 책을 줄 거예요.",
+    answer: 3,
+    options: ["건강", "음식", "휴가", "선물"],
+    explain: "책을 줄 거예요 is about a gift."
+  },
+  {
+    slot: 7,
+    id: "r7c",
+    type: "choice",
+    group: "[7~8] 무엇에 대한 이야기예요? <보기>와 같이 알맞은 것을 고르세요. (각 3점)",
+    example: "오늘은 수요일이에요. 그리고 내일은 목요일이에요.\n① 장소 ② 생일 ③ 친구 ④ 요일",
+    prompt: "7.",
+    question: "감기에 걸렸어요. 약을 먹고 집에서 쉬었어요.",
+    answer: 0,
+    options: ["건강", "음식", "휴가", "선물"],
+    explain: "감기, 약, 쉬었어요 are health-related."
+  },
+  {
+    slot: 8,
+    id: "r8b",
+    type: "choice",
+    prompt: "8.",
+    question: "토요일마다 친구들이 만나서 한국어로 이야기해요.",
+    answer: 0,
+    options: ["모임", "교통", "쇼핑", "여행"],
+    explain: "친구들이 만나서 indicates a gathering."
+  },
+  {
+    slot: 8,
+    id: "r8c",
+    type: "choice",
+    prompt: "8.",
+    question: "다음 달에 제주도에 가요. 사진을 많이 찍을 거예요.",
+    answer: 3,
+    options: ["모임", "교통", "쇼핑", "여행"],
+    explain: "Going to Jeju and taking photos is travel."
+  },
+  {
+    slot: 9,
+    id: "r9b",
+    type: "choice",
+    group: "[9~11] 다음을 읽고 <보기>와 같이 물음에 답하세요. (각 3점)",
+    example: "이 사람은 무엇을 먹었어요?\n어제 수진 씨를 만났어요. 밥을 먹었어요.\n① 밥 ② 펜 ③ 시계 ④ 바나나",
+    prompt: "9.",
+    question: "이 사람은 무슨 요일에 테니스를 쳐요?",
+    passage: "저는 운동을 좋아해요. 월요일하고 수요일에는 헬스클럽에 가요. 토요일 아침에는 친구하고 테니스를 쳐요.",
+    answer: 2,
+    options: ["월요일", "수요일", "토요일", "일요일"],
+    explain: "토요일 아침에는 친구하고 테니스를 쳐요 gives Saturday."
+  },
+  {
+    slot: 9,
+    id: "r9c",
+    type: "choice",
+    group: "[9~11] 다음을 읽고 <보기>와 같이 물음에 답하세요. (각 3점)",
+    example: "이 사람은 무엇을 먹었어요?\n어제 수진 씨를 만났어요. 밥을 먹었어요.\n① 밥 ② 펜 ③ 시계 ④ 바나나",
+    prompt: "9.",
+    question: "이 사람은 언제 한국어를 공부해요?",
+    passage: "저는 회사에 다녀요. 월요일부터 금요일까지 일해요. 토요일 오후에 세종학당에서 한국어를 공부해요.",
+    answer: 2,
+    options: ["월요일 오전", "금요일 저녁", "토요일 오후", "일요일 아침"],
+    explain: "토요일 오후에 세종학당에서 한국어를 공부해요 gives the answer."
+  },
+  {
+    slot: 10,
+    id: "r10b",
+    type: "choice",
+    prompt: "10.",
+    question: "이 사람은 집에서 회사까지 무엇을 타고 가요?",
+    passage: "수진 씨는 집에서 회사까지 버스를 타고 가요. 회사에서 세종학당까지 지하철을 타고 가요. 수업이 끝난 후에는 택시를 타고 집에 가요.",
+    answer: 0,
+    options: ["버스", "택시", "지하철", "자전거"],
+    explain: "집에서 회사까지 버스를 타고 가요 is stated directly."
+  },
+  {
+    slot: 10,
+    id: "r10c",
+    type: "choice",
+    prompt: "10.",
+    question: "이 사람은 세종학당에서 집까지 무엇을 타고 가요?",
+    passage: "민수 씨는 회사에 자전거를 타고 가요. 일이 끝난 후에 세종학당까지 버스를 타고 가요. 세종학당에서 집까지 지하철을 타고 가요.",
+    answer: 2,
+    options: ["버스", "택시", "지하철", "자전거"],
+    explain: "세종학당에서 집까지 지하철을 타고 가요 is stated directly."
+  },
+  {
+    slot: 11,
+    id: "r11b",
+    type: "choice",
+    prompt: "11.",
+    question: "이 사람은 왜 약국에 갔어요?",
+    passage: "어제부터 목이 아프고 기침을 했어요. 오늘 아침에 병원에 갔어요. 그리고 병원 옆 약국에서 약을 샀어요.",
+    answer: 0,
+    options: ["약을 사려고", "친구를 만나려고", "가방을 사려고", "운동을 하려고"],
+    explain: "약국에서 약을 샀어요 gives the reason."
+  },
+  {
+    slot: 11,
+    id: "r11c",
+    type: "choice",
+    prompt: "11.",
+    question: "이 사람은 오늘 왜 집에서 쉬어요?",
+    passage: "이번 주에 일이 많아서 많이 피곤해요. 오늘은 약속이 없어요. 그래서 집에서 쉬고 따뜻한 차를 마셔요.",
+    answer: 3,
+    options: ["배가 아파서", "비가 와서", "친구 생일이어서", "피곤해서"],
+    explain: "많이 피곤해요 explains resting at home."
+  },
+  {
+    slot: 12,
+    id: "r12b",
+    type: "choice",
+    group: "[12~15] 다음을 읽고 <보기>와 같이 맞는 것을 고르세요.",
+    example: "저는 흐엉이에요. 베트남 사람이에요.\n① 베트남에 가요. ② 한국 사람이에요. ③ 한국 친구를 만나요. ④ 이 사람은 흐엉이에요.",
+    prompt: "12.",
+    question: "건물 안내",
+    passage: "4층 미술관\n3층 헬스클럽, 화장실\n2층 식당, 카페\n1층 은행, 편의점\n지하 1층 주차장",
+    answer: 2,
+    options: ["카페는 삼 층에 있어요.", "주차장은 일 층에 있어요.", "헬스클럽과 화장실은 같은 층에 있어요.", "은행은 이 층에 있어요."],
+    explain: "3층 has both 헬스클럽 and 화장실."
+  },
+  {
+    slot: 12,
+    id: "r12c",
+    type: "choice",
+    group: "[12~15] 다음을 읽고 <보기>와 같이 맞는 것을 고르세요.",
+    example: "저는 흐엉이에요. 베트남 사람이에요.\n① 베트남에 가요. ② 한국 사람이에요. ③ 한국 친구를 만나요. ④ 이 사람은 흐엉이에요.",
+    prompt: "12.",
+    question: "건물 안내",
+    passage: "3층 영화관\n2층 서점, 카페\n1층 약국, 은행\n지하 1층 주차장",
+    answer: 1,
+    options: ["영화관은 이 층에 있어요.", "서점과 카페는 같은 층에 있어요.", "약국은 지하에 있어요.", "주차장은 삼 층에 있어요."],
+    explain: "2층 has both 서점 and 카페."
+  },
+  {
+    slot: 13,
+    id: "r13b",
+    type: "choice",
+    prompt: "13.",
+    question: "다음을 읽고 맞는 것을 고르세요.",
+    passage: "저는 부산을 여행하고 있어요. 어제는 시장에 가서 기념품을 샀어요. 오늘은 바다가 예뻐서 사진을 많이 찍었어요. 내일은 친구하고 불고기를 먹으러 갈 거예요.",
+    answer: 3,
+    options: ["이 사람은 서울을 여행하고 있어요.", "이 사람은 오늘 기념품을 샀어요.", "이 사람은 내일 혼자 밥을 먹을 거예요.", "이 사람은 내일 불고기를 먹을 거예요."],
+    explain: "내일은 친구하고 불고기를 먹으러 갈 거예요 matches option 4."
+  },
+  {
+    slot: 13,
+    id: "r13c",
+    type: "choice",
+    prompt: "13.",
+    question: "다음을 읽고 맞는 것을 고르세요.",
+    passage: "저는 한국 음식을 좋아해요. 비빔밥은 자주 먹지만 김치찌개는 매워서 잘 못 먹어요. 어제는 냉면을 먹었어요. 냉면이 시원해서 좋았어요.",
+    answer: 1,
+    options: ["이 사람은 김치찌개를 잘 먹어요.", "이 사람은 비빔밥을 자주 먹어요.", "이 사람은 어제 불고기를 먹었어요.", "이 사람은 냉면을 싫어해요."],
+    explain: "비빔밥은 자주 먹지만 directly matches option 2."
+  },
+  {
+    slot: 14,
+    id: "r14b",
+    type: "choice",
+    prompt: "14.",
+    question: "다음을 읽고 맞는 것을 고르세요.",
+    passage: "어제는 친구 생일이었어요. 친구하고 백화점에 갔어요. 저는 친구에게 예쁜 반지를 줬어요. 친구가 아주 좋아했어요.",
+    answer: 2,
+    options: ["이 사람은 오늘 생일이에요.", "이 사람은 시장에 갔어요.", "이 사람은 친구에게 반지를 줬어요.", "친구는 선물을 싫어했어요."],
+    explain: "친구에게 예쁜 반지를 줬어요 is stated directly."
+  },
+  {
+    slot: 14,
+    id: "r14c",
+    type: "choice",
+    prompt: "14.",
+    question: "다음을 읽고 맞는 것을 고르세요.",
+    passage: "오늘은 가족하고 집에서 파티를 했어요. 어머니가 음식을 만들었어요. 저는 케이크를 샀어요. 저녁에 모두 같이 노래를 불렀어요.",
+    answer: 1,
+    options: ["이 사람은 식당에서 파티를 했어요.", "이 사람은 케이크를 샀어요.", "친구들이 노래를 불렀어요.", "아버지가 음식을 주문했어요."],
+    explain: "저는 케이크를 샀어요 is stated directly."
+  },
+  {
+    slot: 15,
+    id: "r15b",
+    type: "choice",
+    prompt: "15.",
+    question: "다음을 읽고 맞는 것을 고르세요.",
+    passage: "주말에 친구하고 자전거를 탔어요. 두 시간 정도 공원에서 탔어요. 공원 근처 카페에서 커피를 마시고 집에는 버스를 타고 갔어요.",
+    answer: 0,
+    options: ["이 사람은 버스를 타고 집에 갔어요.", "이 사람은 혼자 자전거를 탔어요.", "이 사람은 세 시간 자전거를 탔어요.", "이 사람은 카페에서 밥을 먹었어요."],
+    explain: "집에는 버스를 타고 갔어요 is stated directly."
+  },
+  {
+    slot: 15,
+    id: "r15c",
+    type: "choice",
+    prompt: "15.",
+    question: "다음을 읽고 맞는 것을 고르세요.",
+    passage: "일요일에 혼자 미술관에 갔어요. 그림을 구경한 후에 서점에서 책을 샀어요. 집에는 지하철을 타고 갔어요.",
+    answer: 3,
+    options: ["이 사람은 친구와 미술관에 갔어요.", "이 사람은 영화관에 갔어요.", "이 사람은 서점에서 가방을 샀어요.", "이 사람은 지하철을 타고 집에 갔어요."],
+    explain: "집에는 지하철을 타고 갔어요 is stated directly."
+  }
+];
+
+const LISTENING_QUESTION_SLOTS = buildQuestionSlots(LISTENING_QUESTIONS, LISTENING_VARIANT_ITEMS);
+const READING_QUESTION_SLOTS = buildQuestionSlots(READING_QUESTIONS, READING_VARIANT_ITEMS);
+
+function buildQuestionSlots(baseQuestions, variants) {
+  const slots = baseQuestions.map((question) => [question]);
+  variants.forEach((question) => {
+    const slotIndex = question.slot - 1;
+    const copy = { ...question };
+    delete copy.slot;
+    if (slots[slotIndex]) slots[slotIndex].push(copy);
+  });
+  return slots;
+}
+
+function getChoiceQuestions(part) {
+  const slots = part === "listening" ? LISTENING_QUESTION_SLOTS : READING_QUESTION_SLOTS;
+  const seed = state.examSeeds?.[part] || 1;
+  return slots.map((slot, index) => slot[Math.floor(seededValue(`${seed}-${part}`, index) * slot.length) % slot.length]);
+}
+
 const WRITING_PROMPTS = [
   {
     id: "w1",
@@ -1815,10 +2834,184 @@ const SPEAKING_PROMPTS = [
   }
 ];
 
+const WRITING_VARIANT_ITEMS = [
+  {
+    slot: 1,
+    prompt: "저는 운동을 (          ) 주말마다 공원에 가요. (9점)",
+    accepted: ["좋아해서"],
+    model: "저는 운동을 좋아해서 주말마다 공원에 가요.",
+    hint: "Use -아/어서 to give a reason."
+  },
+  {
+    slot: 1,
+    prompt: "비가 많이 (          ) 우산을 사려고 해요. (9점)",
+    accepted: ["와서"],
+    model: "비가 많이 와서 우산을 사려고 해요.",
+    hint: "Use -아/어서 to connect cause and result."
+  },
+  {
+    slot: 2,
+    prompt: "요즘 한국어를 배우고 있어요. 그래서 한국 드라마를 (          ). (9점)",
+    accepted: ["자주 봐요", "많이 봐요", "봐요"],
+    model: "요즘 한국어를 배우고 있어요. 그래서 한국 드라마를 자주 봐요.",
+    hint: "Complete the result naturally."
+  },
+  {
+    slot: 2,
+    prompt: "저는 요리를 좋아해요. 그래서 주말에 음식을 (          ). (9점)",
+    accepted: ["자주 만들어요", "많이 만들어요", "만들어요"],
+    model: "저는 요리를 좋아해요. 그래서 주말에 음식을 자주 만들어요.",
+    hint: "Use a natural verb after 음식을."
+  },
+  {
+    slot: 3,
+    prompt: "내일 친구 생일이에요. 친구에게 선물을 (          ). (12점)",
+    accepted: ["줄 거예요", "주려고 해요", "살 거예요"],
+    model: "내일 친구 생일이에요. 친구에게 선물을 줄 거예요.",
+    hint: "Use future plan or intention."
+  },
+  {
+    slot: 3,
+    prompt: "이번 주말에 시장에 가요. 시장에서 옷을 (          ). (12점)",
+    accepted: ["살 거예요", "사려고 해요", "사요"],
+    model: "이번 주말에 시장에 가요. 시장에서 옷을 살 거예요.",
+    hint: "Use -(으)ㄹ 거예요 or -(으)려고 해요."
+  },
+  {
+    slot: 4,
+    prompt: "다음을 읽고 40~60자로 글을 쓰세요. (20점)",
+    box: "여러분은 주말에 무엇을 했어요? 누구와 같이 했어요? 어땠어요?",
+    model: "저는 주말에 친구하고 공원에 갔어요. 날씨가 좋아서 산책하고 사진을 찍었어요.",
+    keywords: ["주말", "친구", "공원", "산책", "사진", "좋", "했"]
+  },
+  {
+    slot: 4,
+    prompt: "다음을 읽고 40~60자로 글을 쓰세요. (20점)",
+    box: "여러분은 어떤 음식을 좋아해요? 왜 좋아해요? 어디에서 자주 먹어요?",
+    model: "저는 비빔밥을 좋아해요. 맛있고 건강해서 학교 근처 식당에서 자주 먹어요.",
+    keywords: ["음식", "좋아", "맛있", "자주", "먹", "식당", "왜"]
+  }
+];
+
+const SPEAKING_VARIANT_ITEMS = [
+  {
+    slot: 1,
+    id: "s1b",
+    number: "1.",
+    prompt: "(OO 씨는) 주말에 무슨 운동을 해요? (9점)",
+    max: 9,
+    seconds: 30,
+    model: "저는 주말에 공원에서 자전거를 타요. 운동이 재미있어요.",
+    keywords: ["주말", "운동", "공원", "자전거", "타요", "좋아해요"]
+  },
+  {
+    slot: 1,
+    id: "s1c",
+    number: "1.",
+    prompt: "(OO 씨는) 어떤 운동을 자주 해요? 어디에서 해요? (9점)",
+    max: 9,
+    seconds: 30,
+    model: "저는 수영을 자주 해요. 집 근처 수영장에서 해요.",
+    keywords: ["운동", "자주", "수영", "헬스", "공원", "수영장", "에서"]
+  },
+  {
+    slot: 2,
+    id: "s2b",
+    number: "2.",
+    prompt: "여기에서 세종학당까지 어떻게 가요? (9점)",
+    max: 9,
+    seconds: 30,
+    model: "여기에서 세종학당까지 지하철을 타고 가요. 20분 정도 걸려요.",
+    keywords: ["여기에서", "세종학당", "까지", "지하철", "버스", "타고", "가요"]
+  },
+  {
+    slot: 2,
+    id: "s2c",
+    number: "2.",
+    prompt: "집에서 회사까지 무엇을 타고 가요? 얼마나 걸려요? (9점)",
+    max: 9,
+    seconds: 30,
+    model: "집에서 회사까지 버스를 타고 가요. 30분 정도 걸려요.",
+    keywords: ["집에서", "회사까지", "버스", "지하철", "타고", "걸려요", "정도"]
+  },
+  {
+    slot: 3,
+    id: "s3b",
+    number: "3.",
+    prompt: "친구 생일에 무슨 선물을 사요? 왜 그 선물을 사요? (12점)",
+    max: 12,
+    seconds: 45,
+    model: "저는 친구에게 지갑을 사요. 친구가 예쁜 지갑을 좋아해서 사요.",
+    keywords: ["친구", "생일", "선물", "사요", "지갑", "예쁜", "좋아해서"]
+  },
+  {
+    slot: 3,
+    id: "s3c",
+    number: "3.",
+    prompt: "쇼핑을 어디에서 해요? 거기에서 보통 무엇을 사요? (12점)",
+    max: 12,
+    seconds: 45,
+    model: "저는 시장에서 쇼핑을 해요. 거기에서 옷하고 과일을 자주 사요.",
+    keywords: ["쇼핑", "시장", "백화점", "마트", "옷", "과일", "사요", "자주"]
+  },
+  {
+    slot: 4,
+    id: "s4b",
+    number: "4.",
+    prompt: "지난 주말에 무엇을 했어요? 누구와 같이 했어요? 어땠어요? 1분 동안 이야기하세요. (20점)",
+    max: 20,
+    seconds: 60,
+    model: "지난 주말에 친구하고 공원에 갔어요. 날씨가 좋아서 산책하고 사진을 찍었어요.",
+    keywords: ["지난", "주말", "친구", "공원", "갔어요", "좋아서", "사진", "찍었어요"]
+  },
+  {
+    slot: 4,
+    id: "s4c",
+    number: "4.",
+    prompt: "어떤 한국 음식을 좋아해요? 왜 좋아해요? 어디에서 자주 먹어요? 1분 동안 이야기하세요. (20점)",
+    max: 20,
+    seconds: 60,
+    model: "저는 비빔밥을 좋아해요. 맛있고 건강해서 학교 근처 식당에서 자주 먹어요.",
+    keywords: ["한국", "음식", "좋아해요", "맛있", "자주", "먹어요", "식당", "왜"]
+  }
+];
+
+const WRITING_PROMPT_SLOTS = buildPromptSlots(WRITING_PROMPTS, WRITING_VARIANT_ITEMS, 0);
+const SPEAKING_PROMPT_SLOTS = buildPromptSlots(SPEAKING_PROMPTS, SPEAKING_VARIANT_ITEMS, 1);
+
+function buildPromptSlots(basePrompts, variants, offset) {
+  const slots = basePrompts.map((prompt) => [prompt]);
+  variants.forEach((prompt) => {
+    const slotIndex = prompt.slot - 1 + offset;
+    const copy = { ...prompt };
+    delete copy.slot;
+    if (slots[slotIndex]) slots[slotIndex].push(copy);
+  });
+  return slots;
+}
+
+function getWritingPrompts() {
+  return selectPromptSlots(WRITING_PROMPT_SLOTS, state.examSeeds?.writing || 1).slice(0, 4);
+}
+
+function getSpeakingPrompts() {
+  return selectPromptSlots(SPEAKING_PROMPT_SLOTS, state.examSeeds?.speaking || 1);
+}
+
+function selectPromptSlots(slots, seed) {
+  return slots.map((slot, index) => slot[Math.floor(seededValue(`${seed}-prompt`, index) * slot.length) % slot.length]);
+}
+
 const DEFAULT_STATE = {
   part: "listening",
   index: 0,
   startedAt: {},
+  examSeeds: {
+    listening: 101,
+    reading: 202,
+    writing: 303,
+    speaking: 404
+  },
   choiceOrders: {
     listening: {},
     reading: {}
@@ -1898,16 +3091,19 @@ function bindEvents() {
   els.newVariationButton.addEventListener("click", () => {
     const part = state.part;
     if (part === "listening" || part === "reading") {
+      state.examSeeds[part] = createExamSeed(part);
       state.choiceOrders[part] = {};
       state.answers[part] = Array(SECTION_CONFIG[part].count).fill(null);
       state.checked[part] = Array(SECTION_CONFIG[part].count).fill(null);
     }
     if (part === "writing") {
+      state.examSeeds.writing = createExamSeed("writing");
       state.answers.writing = ["", "", "", ""];
       state.checked.writing = Array(4).fill(null);
       state.writingModels = Array(4).fill(false);
     }
     if (part === "speaking") {
+      state.examSeeds.speaking = createExamSeed("speaking");
       state.answers.speaking = ["", "", "", "", ""];
       state.checked.speaking = Array(5).fill(null);
       state.speakingScores = Array(5).fill(null);
@@ -1959,6 +3155,7 @@ function startNewExam() {
   stopRecognition();
   speakingStatusMessage = "";
   state = createFreshState();
+  state.examSeeds = freshExamSeeds();
   localStorage.removeItem(STORAGE_KEY);
   activatePart("listening", true);
 }
@@ -1970,6 +3167,19 @@ function createFreshState() {
 function scrollExamIntoView() {
   if (!els.examLayout) return;
   els.examLayout.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function freshExamSeeds() {
+  return {
+    listening: createExamSeed("listening"),
+    reading: createExamSeed("reading"),
+    writing: createExamSeed("writing"),
+    speaking: createExamSeed("speaking")
+  };
+}
+
+function createExamSeed(part) {
+  return `${part}-${Date.now()}-${Math.random().toString(36).slice(2)}`;
 }
 
 function ensureTimer(part) {
@@ -1997,8 +3207,8 @@ function render() {
   renderAnswerGrid();
   renderStats();
 
-  if (state.part === "listening") renderChoicePaper(LISTENING_QUESTIONS, "듣기 평가 (1~15번)", "listening");
-  if (state.part === "reading") renderChoicePaper(READING_QUESTIONS, "읽기 평가 (1~15번)", "reading");
+  if (state.part === "listening") renderChoicePaper(getChoiceQuestions("listening"), "듣기 평가 (1~15번)", "listening");
+  if (state.part === "reading") renderChoicePaper(getChoiceQuestions("reading"), "읽기 평가 (1~15번)", "reading");
   if (state.part === "writing") renderWritingPaper();
   if (state.part === "speaking") renderSpeakingPaper();
 
@@ -2090,7 +3300,7 @@ function renderChoice(option, displayIndex, originalIndex, q, selected, checked)
 }
 
 function chooseAnswer(part, originalIndex) {
-  const questions = part === "listening" ? LISTENING_QUESTIONS : READING_QUESTIONS;
+  const questions = getChoiceQuestions(part);
   const q = questions[state.index];
   const correct = originalIndex === q.answer;
   state.answers[part][state.index] = originalIndex;
@@ -2110,7 +3320,8 @@ function answerText(q) {
 }
 
 function renderWritingPaper() {
-  const items = WRITING_PROMPTS.map((item, index) => {
+  const currentWritingPrompts = getWritingPrompts();
+  const items = currentWritingPrompts.map((item, index) => {
     const checked = state.checked.writing[index];
     const isLong = index === 3;
     const modelVisible = state.writingModels[index] ? "visible" : "";
@@ -2169,7 +3380,7 @@ function renderWritingPaper() {
 }
 
 function checkWriting(index) {
-  const item = WRITING_PROMPTS[index];
+  const item = getWritingPrompts()[index];
   const answer = normalizeKorean(state.answers.writing[index] || "");
   if (index < 3) {
     const correct = item.accepted.some((accepted) => answer.includes(normalizeKorean(accepted)));
@@ -2198,7 +3409,8 @@ function checkWriting(index) {
 
 function renderSpeakingPaper() {
   const recognitionSupported = Boolean(getRecognitionConstructor());
-  const items = SPEAKING_PROMPTS.map((item, index) => {
+  const currentSpeakingPrompts = getSpeakingPrompts();
+  const items = currentSpeakingPrompts.map((item, index) => {
     const score = state.speakingScores[index];
     const checked = state.checked.speaking[index];
     const isRecording = activeSpeakingIndex === index;
@@ -2257,7 +3469,7 @@ function renderSpeakingPaper() {
   });
 
   els.examPaper.querySelectorAll("[data-play-speaking]").forEach((button) => {
-    button.addEventListener("click", () => speakKorean(SPEAKING_PROMPTS[Number(button.dataset.playSpeaking)].prompt));
+    button.addEventListener("click", () => speakKorean(getSpeakingPrompts()[Number(button.dataset.playSpeaking)].prompt));
   });
 
   els.examPaper.querySelectorAll("[data-record-speaking]").forEach((button) => {
@@ -2402,7 +3614,7 @@ function recognitionErrorMessage(event) {
 }
 
 function scoreSpeaking(index) {
-  const item = SPEAKING_PROMPTS[index];
+  const item = getSpeakingPrompts()[index];
   const raw = (state.answers.speaking[index] || "").trim();
   const normalized = normalizeKorean(raw);
   const max = item.max || 0;
@@ -2476,7 +3688,7 @@ function renderStats() {
   const answered = objectiveParts.reduce((sum, part) => sum + state.answers[part].filter((value) => value !== null).length, 0);
   const correct = objectiveParts.reduce((sum, part) => sum + state.checked[part].filter(Boolean).length, 0);
   const writingChars = state.answers.writing.reduce((sum, value) => sum + countKoreanChars(value || ""), 0);
-  const speakingSeconds = SPEAKING_PROMPTS.reduce((sum, prompt, index) => {
+  const speakingSeconds = getSpeakingPrompts().reduce((sum, prompt, index) => {
     const text = state.answers.speaking[index] || "";
     return sum + Math.min(prompt.seconds, Math.floor(countKoreanChars(text) / 3));
   }, 0);
@@ -2635,19 +3847,92 @@ function lookupTranslation(text) {
   const clean = text.trim().replace(/[.,!?()[\]<>~:;'"“”‘’]/g, "");
   if (DICTIONARY[clean]) return DICTIONARY[clean];
   const tokens = clean.split(/\s+/).filter(Boolean);
-  const translated = tokens.map((token) => {
-    if (DICTIONARY[token]) return `${token}: ${DICTIONARY[token]}`;
-    const stripped = stripKoreanEnding(token);
-    if (DICTIONARY[stripped]) return `${token}: ${DICTIONARY[stripped]}`;
-    return `${token}: study this`;
-  });
+  const translated = tokens.map((token) => analyzeKoreanToken(token));
   return translated.join(" / ");
+}
+
+function analyzeKoreanToken(token) {
+  const clean = token.trim().replace(/[.,!?()[\]<>~:;'"“”‘’]/g, "");
+  if (!clean) return "";
+  if (DICTIONARY[clean]) return `${clean}: ${DICTIONARY[clean]}`;
+
+  const spacedPattern = analyzeSpacedPattern(clean);
+  if (spacedPattern) return spacedPattern;
+
+  const particleMatch = splitBySuffix(clean, PARTICLE_TRANSLATIONS);
+  if (particleMatch) {
+    return `${clean}: ${describeRoot(particleMatch.root)} + ${particleMatch.suffix}: ${particleMatch.meaning}`;
+  }
+
+  const endingMatch = splitBySuffix(clean, ENDING_TRANSLATIONS);
+  if (endingMatch) {
+    return `${clean}: ${describeRoot(endingMatch.root)} + ${endingMatch.suffix}: ${endingMatch.meaning}`;
+  }
+
+  const stripped = stripKoreanEnding(clean);
+  if (stripped && stripped !== clean) {
+    return `${clean}: ${describeRoot(stripped)} + grammar ending/particle`;
+  }
+
+  return `${clean}: Korean word/name; no exact glossary match yet`;
+}
+
+function analyzeSpacedPattern(token) {
+  if (token.endsWith("거예요") && token.length > "거예요".length) {
+    const root = token.slice(0, -"거예요".length).replace(/[을ㄹ]$/u, "");
+    return `${token}: ${describeRoot(root)} + -(으)ㄹ 거예요: future plan, will / going to`;
+  }
+  return "";
+}
+
+function splitBySuffix(token, suffixMap) {
+  const suffixes = Object.keys(suffixMap).sort((a, b) => b.length - a.length);
+  for (const suffix of suffixes) {
+    if (!token.endsWith(suffix) || token.length <= suffix.length) continue;
+    const root = token.slice(0, -suffix.length);
+    if (!root) continue;
+    return { root, suffix, meaning: suffixMap[suffix] };
+  }
+  return null;
+}
+
+function describeRoot(root) {
+  if (!root) return "root";
+  if (DICTIONARY[root]) return `${root}: ${DICTIONARY[root]}`;
+  if (STEM_TRANSLATIONS[root]) return `${root}: ${STEM_TRANSLATIONS[root]} stem`;
+  const normalized = normalizeConjugationRoot(root);
+  if (normalized && DICTIONARY[normalized]) return `${normalized}: ${DICTIONARY[normalized]}`;
+  if (normalized && STEM_TRANSLATIONS[normalized]) return `${normalized}: ${STEM_TRANSLATIONS[normalized]} stem`;
+  const stripped = stripKoreanEnding(root);
+  if (stripped && stripped !== root && DICTIONARY[stripped]) return `${stripped}: ${DICTIONARY[stripped]}`;
+  if (stripped && stripped !== root && STEM_TRANSLATIONS[stripped]) return `${stripped}: ${STEM_TRANSLATIONS[stripped]} stem`;
+  return `${root}: root/stem`;
+}
+
+function normalizeConjugationRoot(root) {
+  if (!root) return "";
+  const irregulars = {
+    와: "오",
+    봐: "보",
+    줘: "주",
+    돼: "되",
+    해: "하",
+    사: "사",
+    가: "가"
+  };
+  if (irregulars[root]) return irregulars[root];
+  return root
+    .replace(/워$/u, "우")
+    .replace(/워서$/u, "우")
+    .replace(/웠$/u, "우")
+    .replace(/라$/u, "르")
+    .replace(/러$/u, "르");
 }
 
 function stripKoreanEnding(token) {
   return token
-    .replace(/(은|는|이|가|을|를|에|에서|으로|로|까지|부터|보다|하고|와|과|에게|한테|도|만)$/u, "")
-    .replace(/(이에요|예요|어요|아요|해요|했어요|았어요|었어요|고|서|지만|니까|려고|으려고|ㄹ거예요|을거예요)$/u, "");
+    .replace(/(에서|에게|한테|으로|까지|부터|보다|하고|은|는|이|가|을|를|에|로|와|과|도|만)$/u, "")
+    .replace(/(을 거예요|ㄹ 거예요|거예요|이에요|예요|했어요|았어요|었어요|해요|어요|아요|아서|어서|해서|지만|으니까|니까|으려고|려고|으러|러|으세요|세요|아야|어야|고)$/u, "");
 }
 
 function pictureSvg(kind, label) {
