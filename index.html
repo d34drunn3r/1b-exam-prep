@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Korean Boo 1B Exam Phone</title>
+    <title>Korean Boo 1B Exam Prep</title>
     <style>
 :root {
   --ink: #151515;
@@ -983,7 +983,7 @@ button {
   }
 }
 
-    </style>
+</style>
   </head>
   <body>
     <div class="page-shell">
@@ -1602,8 +1602,12 @@ const PARTICLE_TRANSLATIONS = {
   하고: "and / with",
   와: "and / with",
   과: "and / with",
+  의: "possessive marker: of / 's",
   도: "also / too",
-  만: "only"
+  만: "only",
+  마다: "every / each",
+  이나: "or; about/as many as",
+  나: "or; about/as many as"
 };
 
 const ENDING_TRANSLATIONS = {
@@ -1638,7 +1642,27 @@ const ENDING_TRANSLATIONS = {
   지: "nominal or connecting ending",
   지요: "right? / tag question",
   네요: "expresses realization",
-  군요: "expresses realization"
+  군요: "expresses realization",
+  아: "conjugation vowel used in -아/어요 forms",
+  어: "conjugation vowel used in -아/어요 forms",
+  으: "linking vowel before some consonant-starting endings",
+  라: "command/quoted-form ending fragment",
+  워: "conjugated vowel pattern from ㅂ-irregular adjectives",
+  워서: "because/so form from ㅂ-irregular adjectives",
+  았: "past-tense marker fragment",
+  었: "past-tense marker fragment",
+  웠: "past-tense marker fragment from ㅂ-irregular adjectives",
+  기: "turns a verb/adjective into a noun: -ing / to do",
+  ㄴ: "modifier ending before a noun",
+  은: "modifier ending before a noun",
+  는: "modifier ending before a noun",
+  을까요: "shall we? / do you think?",
+  ㄹ까요: "shall we? / do you think?",
+  을게요: "I will; speaker's promise",
+  ㄹ게요: "I will; speaker's promise",
+  습니다: "formal polite statement ending",
+  겠습니다: "formal future / intention ending",
+  요: "polite ending"
 };
 
 const STEM_TRANSLATIONS = {
@@ -1677,12 +1701,278 @@ const STEM_TRANSLATIONS = {
   많: "be many",
   작: "be small",
   크: "be big",
+  그렇: "be so / be that way",
+  같: "be same / like",
   길: "be long",
+  끝나: "end / finish",
   싸: "be cheap",
   비싸: "be expensive",
+  따뜻하: "be warm",
+  건강하: "be healthy",
+  맛있: "be delicious",
+  맛없: "not taste good",
+  재미있: "be fun / interesting",
+  재미없: "not be fun / interesting",
+  시원하: "be cool / refreshing",
+  나쁘: "be bad",
+  춥: "be cold",
+  높: "be high",
+  멀: "be far",
+  맵: "be spicy",
+  무겁: "be heavy",
+  예쁘: "be pretty",
+  어떻: "be how",
   피곤하: "be tired",
-  필요하: "need"
+  필요하: "need",
+  대답하: "answer",
+  답하: "answer",
+  이야기하: "talk / tell",
+  시작하: "start",
+  쇼핑하: "shop",
+  구경하: "look around / sightsee",
+  노래하: "sing",
+  말하: "speak / say",
+  좋아하: "like",
+  싫어하: "dislike",
+  산책하: "take a walk",
+  부르: "sing / call",
+  뛰: "run",
+  걸리: "take time",
+  걸어가: "walk to / go on foot",
+  들어가: "enter / go in",
+  이어지: "continue / be connected",
+  자르: "cut",
+  찍: "take a photo",
+  쓰: "write / use / wear on head",
+  치: "play a sport/instrument",
+  되: "become / work out",
+  돕: "help",
+  드시: "eat/drink honorifically",
+  않: "not do / not be",
+  있: "exist / have",
+  없: "not exist / not have"
 };
+
+Object.assign(DICTIONARY, {
+  가: "subject marker / go stem",
+  가서: "go and / go so",
+  각: "each",
+  같은: "same / like",
+  거기: "there",
+  거기에서: "from there / at that place",
+  것: "thing / fact",
+  것을: "thing/fact + object marker",
+  건강: "health",
+  건강해서: "because healthy / because well",
+  건물: "building",
+  고: "and / then connector",
+  고향: "hometown",
+  고향에: "to/in hometown",
+  고향이에요: "is hometown",
+  공부: "study",
+  공부할까요: "shall we study?",
+  공부했어요: "studied",
+  교통: "transportation / traffic",
+  구경: "sightseeing / looking around",
+  구경을: "sightseeing + object marker",
+  구경한: "looked around / sightseeing modifier",
+  구경할: "will look around / sightseeing modifier",
+  그: "that / the",
+  그래요: "yes / that's right / it is so",
+  그림: "picture",
+  그림을: "picture + object marker",
+  글: "writing / text",
+  글을: "writing/text + object marker",
+  길: "road / street / way",
+  끝났고: "ended and",
+  끝났어서: "because it had ended",
+  나빠요: "is bad",
+  내용: "content",
+  내용과: "content + and/with",
+  네: "yes",
+  노래: "song",
+  노래도: "song also",
+  노래해요: "sing",
+  농구: "basketball",
+  누가: "who + subject marker",
+  대답: "answer / reply",
+  대답으로: "as an answer/reply",
+  대답을: "answer/reply + object marker",
+  대한: "about / regarding",
+  도와줄: "will help",
+  돈: "money",
+  동안: "during / for",
+  돼: "becomes / works / is okay",
+  됐: "became / worked / was okay",
+  드세요: "please eat/drink honorifically",
+  들어갈: "will enter / go in",
+  들은: "heard / listened to",
+  따뜻: "warm",
+  따뜻해서: "because it is warm",
+  따뜻해요: "is warm",
+  말: "words / speech",
+  말로: "by words / in speech",
+  말을: "words/speech + object marker",
+  말하기: "speaking",
+  맞는: "correct / matching",
+  매운: "spicy",
+  모두: "all / everyone",
+  무엇: "what",
+  무엇에: "about what / to what",
+  물음: "question",
+  물음에: "to the question",
+  뭐: "what",
+  뭐예요: "what is it?",
+  뭘: "what + object marker",
+  미용실: "hair salon / beauty salon",
+  미용실은: "hair salon + topic marker",
+  바나나: "banana",
+  바다: "sea / ocean",
+  바다가: "sea/ocean + subject marker",
+  바다를: "sea/ocean + object marker",
+  받았기: "receiving; because received",
+  번: "time / number occurrence",
+  베트남: "Vietnam",
+  베트남에: "to/in Vietnam",
+  봐: "see/watch (casual stem)",
+  봤: "saw / watched",
+  부를: "will sing / will call",
+  불러요: "sing / call",
+  불렀어요: "sang / called",
+  비싸서: "because expensive",
+  비쌌지만: "was expensive but",
+  사진: "photo",
+  산책하고: "take a walk and",
+  산책하려고: "intending to take a walk",
+  삼: "three",
+  샀: "bought",
+  서울: "Seoul",
+  서울에: "to/in Seoul",
+  서울에서: "in/from Seoul",
+  서울을: "Seoul + object marker",
+  서울이: "Seoul + subject marker",
+  성취도: "achievement level",
+  세: "three / age counter depending context",
+  세종한국어: "Sejong Korean",
+  세트: "set",
+  쇼핑: "shopping",
+  쇼핑몰: "shopping mall",
+  쇼핑몰에서: "at the shopping mall",
+  쇼핑을: "shopping + object marker",
+  쇼핑했어요: "shopped",
+  수: "ability / possibility / number",
+  수영: "swimming",
+  숙제: "homework",
+  숙제를: "homework + object marker",
+  쉴: "will rest",
+  시계: "watch / clock",
+  시원해서: "because cool/refreshing",
+  싫어했어요: "disliked",
+  싸서: "because cheap",
+  쌌: "was cheap",
+  써요: "write / use / wear on head",
+  썼: "wrote / used / wore on head",
+  씨: "Mr./Ms. name suffix",
+  씨는: "Mr./Ms. + topic marker",
+  씨를: "Mr./Ms. + object marker",
+  씨와: "with Mr./Ms.",
+  아니요: "no",
+  아주: "very",
+  아침: "morning",
+  아침에: "in the morning",
+  아침에는: "in the morning + topic marker",
+  아침이에요: "is morning",
+  아팠지만: "was sick/hurt but",
+  안: "not / inside",
+  어디: "where",
+  어디에: "where to / where at",
+  어디예요: "where is it?",
+  어땠어요: "how was it?",
+  어떤: "what kind of / which",
+  에렌: "Eren (name)",
+  에렌이에요: "is Eren",
+  여기: "here",
+  여기에: "here / to here",
+  여러분: "everyone / you all",
+  여러분은: "everyone/you all + topic marker",
+  여러분의: "everyone's / your",
+  여성: "female / woman",
+  여행: "travel",
+  여행에서: "on/from a trip",
+  여행이: "travel + subject marker",
+  역: "station",
+  역이: "station + subject marker",
+  연습: "practice",
+  옆: "side / next to",
+  예뻐: "pretty",
+  예뻐서: "because pretty",
+  예뻐요: "is pretty",
+  오른쪽: "right side",
+  오른쪽에: "on/to the right",
+  오백: "five hundred",
+  오전: "morning / a.m.",
+  와서: "come and / because came",
+  왔: "came",
+  외모: "appearance",
+  왼쪽: "left side",
+  왼쪽에: "on/to the left",
+  요일: "day of the week",
+  요일에: "on what day / on the day",
+  우리: "we / our",
+  우리는: "we + topic marker",
+  운동: "exercise",
+  운동이: "exercise + subject marker",
+  원: "won, Korean currency",
+  원이에요: "is won",
+  인터넷: "internet",
+  인터넷이: "internet + subject marker",
+  자: "character / letter / sleep stem depending context",
+  자로: "by characters/letters",
+  자를: "will cut",
+  자주: "often",
+  장소: "place",
+  저녁: "evening / dinner",
+  저녁을: "dinner/evening + object marker",
+  전: "before",
+  점: "point",
+  정답: "correct answer",
+  정답을: "correct answer + object marker",
+  좋아: "good / like",
+  좋아해서: "because liking",
+  좋아했어요: "liked",
+  주차: "parking",
+  주차를: "parking + object marker",
+  줘: "give",
+  줬: "gave",
+  지난: "last / past",
+  지하: "basement / underground",
+  지하에: "underground / in the basement",
+  처음: "first time / beginning",
+  처음이에요: "is the first time",
+  쳐요: "play a sport/instrument",
+  추워요: "is cold",
+  친구들: "friends",
+  친구들과: "with friends",
+  친구들은: "friends + topic marker",
+  친구들이: "friends + subject marker",
+  케이크: "cake",
+  케이크를: "cake + object marker",
+  큰: "big",
+  탔: "rode / took transportation",
+  편해요: "is comfortable",
+  평가: "evaluation / test",
+  피곤해서: "because tired",
+  피곤: "tiredness / tired",
+  하루: "one day / a day",
+  휴가: "vacation",
+  이어질: "will continue / will be connected",
+  할: "will do",
+  합니다: "do / formal polite statement",
+  해: "do",
+  했: "did",
+  헬스: "fitness / gym workout",
+  후: "after"
+});
 
 const LISTENING_QUESTIONS = [
   {
@@ -4305,7 +4595,7 @@ function getSpeakableKoreanSegments(text) {
 }
 
 function showTranslation(word) {
-  const value = word.dataset.translation || "No glossary match yet";
+  const value = word.dataset.translation || lookupTranslation(word.textContent || "");
   const rect = word.getBoundingClientRect();
   els.bubble.textContent = value;
   els.bubble.classList.remove("hidden");
@@ -4355,6 +4645,9 @@ function markKoreanText(root) {
 function lookupTranslation(text) {
   const clean = text.trim().replace(/[.,!?()[\]<>~:;'"“”‘’]/g, "");
   if (DICTIONARY[clean]) return DICTIONARY[clean];
+  if (PARTICLE_TRANSLATIONS[clean]) return `${clean}: ${PARTICLE_TRANSLATIONS[clean]} (particle)`;
+  if (ENDING_TRANSLATIONS[clean]) return `${clean}: ${ENDING_TRANSLATIONS[clean]} (grammar ending)`;
+  if (STEM_TRANSLATIONS[clean]) return `${clean}: ${STEM_TRANSLATIONS[clean]} stem`;
   const tokens = clean.split(/\s+/).filter(Boolean);
   const translated = tokens.map((token) => analyzeKoreanToken(token));
   return translated.join(" / ");
@@ -4364,18 +4657,25 @@ function analyzeKoreanToken(token) {
   const clean = token.trim().replace(/[.,!?()[\]<>~:;'"“”‘’]/g, "");
   if (!clean) return "";
   if (DICTIONARY[clean]) return `${clean}: ${DICTIONARY[clean]}`;
+  if (PARTICLE_TRANSLATIONS[clean]) return `${clean}: ${PARTICLE_TRANSLATIONS[clean]} (particle)`;
+  if (ENDING_TRANSLATIONS[clean]) return `${clean}: ${ENDING_TRANSLATIONS[clean]} (grammar ending)`;
+  if (STEM_TRANSLATIONS[clean]) return `${clean}: ${STEM_TRANSLATIONS[clean]} stem`;
+  const normalizedClean = normalizeConjugationRoot(clean);
+  if (normalizedClean && normalizedClean !== clean && DICTIONARY[normalizedClean]) {
+    return `${clean}: ${normalizedClean}: ${DICTIONARY[normalizedClean]}`;
+  }
+  if (normalizedClean && normalizedClean !== clean && STEM_TRANSLATIONS[normalizedClean]) {
+    return `${clean}: ${normalizedClean}: ${STEM_TRANSLATIONS[normalizedClean]} stem`;
+  }
 
   const spacedPattern = analyzeSpacedPattern(clean);
   if (spacedPattern) return spacedPattern;
 
-  const particleMatch = splitBySuffix(clean, PARTICLE_TRANSLATIONS);
-  if (particleMatch) {
-    return `${clean}: ${describeRoot(particleMatch.root)} + ${particleMatch.suffix}: ${particleMatch.meaning}`;
-  }
-
   const endingMatch = splitBySuffix(clean, ENDING_TRANSLATIONS);
-  if (endingMatch) {
-    return `${clean}: ${describeRoot(endingMatch.root)} + ${endingMatch.suffix}: ${endingMatch.meaning}`;
+  const particleMatch = splitBySuffix(clean, PARTICLE_TRANSLATIONS);
+  const suffixMatch = chooseSuffixMatch(endingMatch, particleMatch);
+  if (suffixMatch) {
+    return `${clean}: ${describeRoot(suffixMatch.root)} + ${suffixMatch.suffix}: ${suffixMatch.meaning}`;
   }
 
   const stripped = stripKoreanEnding(clean);
@@ -4383,7 +4683,7 @@ function analyzeKoreanToken(token) {
     return `${clean}: ${describeRoot(stripped)} + grammar ending/particle`;
   }
 
-  return `${clean}: Korean word/name; no exact glossary match yet`;
+  return `${clean}: Korean word or name used in this exam`;
 }
 
 function analyzeSpacedPattern(token) {
@@ -4405,6 +4705,19 @@ function splitBySuffix(token, suffixMap) {
   return null;
 }
 
+function chooseSuffixMatch(endingMatch, particleMatch) {
+  if (!endingMatch) return particleMatch;
+  if (!particleMatch) return endingMatch;
+  if (particleMatch.suffix.length > endingMatch.suffix.length) return particleMatch;
+  if (endingMatch.suffix.length > particleMatch.suffix.length) return endingMatch;
+
+  const endingRoot = describeRoot(endingMatch.root);
+  if (/stem|be |do|go|come|eat|drink|buy|see|watch|listen|read|wear|meet|make|learn|receive|give|ride|take|walk|answer|talk|start|shop|sing|run|cut|write|use|play|become|help|exist|have/.test(endingRoot)) {
+    return endingMatch;
+  }
+  return particleMatch;
+}
+
 function describeRoot(root) {
   if (!root) return "root";
   if (DICTIONARY[root]) return `${root}: ${DICTIONARY[root]}`;
@@ -4415,7 +4728,7 @@ function describeRoot(root) {
   const stripped = stripKoreanEnding(root);
   if (stripped && stripped !== root && DICTIONARY[stripped]) return `${stripped}: ${DICTIONARY[stripped]}`;
   if (stripped && stripped !== root && STEM_TRANSLATIONS[stripped]) return `${stripped}: ${STEM_TRANSLATIONS[stripped]} stem`;
-  return `${root}: root/stem`;
+  return `${root}: Korean root/stem in this exam`;
 }
 
 function normalizeConjugationRoot(root) {
@@ -4427,10 +4740,47 @@ function normalizeConjugationRoot(root) {
     돼: "되",
     해: "하",
     사: "사",
-    가: "가"
+    가: "가",
+    갔: "가",
+    왔: "오",
+    봤: "보",
+    줬: "주",
+    됐: "되",
+    썼: "쓰",
+    쌌: "싸",
+    샀: "사",
+    탔: "타",
+    했: "하",
+    걸렸: "걸리",
+    끝났: "끝나",
+    받았: "받",
+    불렀: "부르",
+    비쌌: "비싸",
+    아팠: "아프",
+    어땠: "어떻",
+    무거웠: "무겁",
+    좋았: "좋",
+    싫어: "싫어하",
+    좋아: "좋아하",
+    나빠: "나쁘",
+    무거워: "무겁",
+    추워: "춥",
+    예뻐: "예쁘",
+    시원: "시원하",
+    건강: "건강하",
+    피곤: "피곤하",
+    따뜻: "따뜻하",
+    그래: "그렇",
+    불러: "부르",
+    써: "쓰",
+    쳐: "치",
+    드: "드시"
   };
   if (irregulars[root]) return irregulars[root];
   return root
+    .replace(/했$/u, "하")
+    .replace(/았$/u, "")
+    .replace(/었$/u, "")
     .replace(/워$/u, "우")
     .replace(/워서$/u, "우")
     .replace(/웠$/u, "우")
@@ -4564,6 +4914,6 @@ function escapeAttr(value) {
   return escapeHtml(value).replace(/\n/g, " ");
 }
 
-    </script>
+</script>
   </body>
 </html>
