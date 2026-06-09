@@ -1108,6 +1108,7 @@ button {
 
     <script>
 const STORAGE_KEY = "korean-boo-1b-exam-state-v1";
+const EXAM_VERSION_COUNT = 4;
 
 const SECTION_CONFIG = {
   listening: {
@@ -1521,6 +1522,64 @@ Object.assign(DICTIONARY, {
   화장품: "cosmetics",
   회의: "meeting",
   흐엉: "Huong (name)"
+});
+
+Object.assign(DICTIONARY, {
+  앞으로: "from now on / in the future",
+  검은색: "black color",
+  검은색모자: "black hat",
+  고향은: "hometown + topic marker",
+  고향에서: "in hometown / from hometown",
+  괜찮아요: "it is okay",
+  기분이: "feeling/mood + subject marker",
+  김밥: "gimbap",
+  끝나고: "ends and / after ending",
+  끝나서: "because it ended",
+  끝났어요: "ended / finished",
+  댁: "house/home honorific",
+  대구: "Daegu",
+  대구예요: "is Daegu",
+  도와줄게요: "I will help",
+  마음에: "in one's heart / liking",
+  만날: "will meet",
+  만날거예요: "will meet",
+  만나고: "meet and",
+  머리를: "hair + object marker",
+  미용실에: "to the beauty salon / hair salon",
+  부산: "Busan",
+  부산사람이에요: "is a person from Busan",
+  방학: "school vacation",
+  방학에: "during vacation",
+  서울보다: "than Seoul",
+  셔츠: "shirt",
+  수업: "class",
+  수업이: "class + subject marker",
+  수업시간: "class time",
+  아버지는: "father + topic marker",
+  아래에: "below / under",
+  안경을: "glasses + object marker",
+  어때요: "how is it?",
+  어머니에게: "to mother",
+  위에: "above / on",
+  음료수: "beverage",
+  음료수를: "beverage + object marker",
+  전화했어요: "called by phone",
+  전화할: "will call",
+  전화할게요: "I will call",
+  전화하려고: "intending to call",
+  전화하세요: "please call",
+  전화해도: "even if calling / may call",
+  제주도: "Jeju Island",
+  제주도가: "Jeju Island + subject marker",
+  제주도에: "to Jeju Island",
+  축하했어요: "congratulated / celebrated",
+  친한: "close / intimate",
+  키가: "height + subject marker",
+  파란색: "blue color",
+  파란색셔츠: "blue shirt",
+  할머니댁: "grandmother's home",
+  형에게: "to older brother",
+  후에는: "after that + topic marker"
 });
 
 const PARTICLE_TRANSLATIONS = {
@@ -2735,8 +2794,375 @@ const READING_VARIANT_ITEMS = [
   }
 ];
 
-const LISTENING_QUESTION_SLOTS = buildQuestionSlots(LISTENING_QUESTIONS, LISTENING_VARIANT_ITEMS);
-const READING_QUESTION_SLOTS = buildQuestionSlots(READING_QUESTIONS, READING_VARIANT_ITEMS);
+const LISTENING_VERSION_4_ITEMS = [
+  {
+    slot: 1,
+    id: "l1d",
+    type: "picture",
+    group: "[1~3] 다음을 듣고 <보기>와 같이 알맞은 그림을 고르세요. (각 3점)",
+    example: "남자: 의자예요.",
+    prompt: "1.",
+    audio: "책상이에요.",
+    answer: 1,
+    options: [
+      { text: "의자", image: "chair" },
+      { text: "책상", image: "desk" },
+      { text: "펜", image: "pen" },
+      { text: "가방", image: "bag" }
+    ],
+    explain: "책상이에요 means 'It is a desk.'"
+  },
+  {
+    slot: 2,
+    id: "l2d",
+    type: "picture",
+    prompt: "2.",
+    audio: "아버지는 자동차를 타고 회사에 가요.",
+    answer: 2,
+    options: [
+      { text: "자전거", image: "bike" },
+      { text: "걸어가요", image: "walk" },
+      { text: "자동차", image: "car" },
+      { text: "택시", image: "taxi" }
+    ],
+    explain: "자동차를 타고 means he goes by car."
+  },
+  {
+    slot: 3,
+    id: "l3d",
+    type: "picture",
+    prompt: "3.",
+    audio: "할머니는 아침에 물을 마셔요.",
+    answer: 2,
+    options: [
+      { text: "뛰어요", image: "run" },
+      { text: "노래해요", image: "sing" },
+      { text: "물을 마셔요", image: "drink" },
+      { text: "쉬어요", image: "sleep" }
+    ],
+    explain: "물을 마셔요 means 'drinks water.'"
+  },
+  {
+    slot: 4,
+    id: "l4d",
+    type: "choice",
+    group: "[4~9] 다음을 듣고 <보기>와 같이 이어질 말로 알맞은 말을 고르세요. (각 3점)",
+    example: "남자: 물 있어요?\n여자: ________\n① 네, 있어요. ② 아니요. 비싸요. ③ 네, 물을 사요. ④ 아니요. 오백 원이에요.",
+    prompt: "4.",
+    audio: "수업이 끝난 후에 전화해도 돼요?",
+    question: "알맞은 대답을 고르세요.",
+    answer: 2,
+    options: ["아니요. 전화가 예뻐요.", "네, 수업을 먹어요.", "네, 괜찮아요. 전화하세요.", "아니요. 회사까지 걸려요."],
+    explain: "전화해도 돼요 asks if calling is okay, so a permission reply fits."
+  },
+  {
+    slot: 5,
+    id: "l5d",
+    type: "choice",
+    prompt: "5.",
+    audio: "우체국까지 어떻게 가요?",
+    question: "알맞은 대답을 고르세요.",
+    answer: 0,
+    options: ["은행 앞에서 오른쪽으로 가세요.", "네, 우체국이에요.", "어제 우체국에 갔어요.", "우체국보다 커요."],
+    explain: "어떻게 가요 asks for directions."
+  },
+  {
+    slot: 6,
+    id: "l6d",
+    type: "choice",
+    prompt: "6.",
+    audio: "머리가 아파요. 오늘 모임에 갈 수 있어요?",
+    question: "알맞은 대답을 고르세요.",
+    answer: 3,
+    options: ["네, 모임이 길어요.", "아니요. 모자를 썼어요.", "오늘은 금요일이에요.", "미안해요. 집에서 쉬어야 해요."],
+    explain: "The speaker is sick, so declining and saying they must rest is natural."
+  },
+  {
+    slot: 7,
+    id: "l7d",
+    type: "choice",
+    group: "[7~8] 무엇에 대한 이야기예요? <보기>와 같이 알맞은 것을 고르세요. (각 3점)",
+    example: "오늘은 수요일이에요. 그리고 내일은 목요일이에요.\n① 장소 ② 생일 ③ 친구 ④ 요일",
+    prompt: "7.",
+    audio: "저는 머리가 짧아요. 동생은 머리가 길어요. 우리 형은 키가 커요.",
+    question: "무엇에 대한 이야기예요?",
+    answer: 2,
+    options: ["음식", "교통", "외모", "고향"],
+    explain: "Hair length and height are appearance words."
+  },
+  {
+    slot: 8,
+    id: "l8d",
+    type: "choice",
+    prompt: "8.",
+    audio: "이번 달에 가족 모임이 있어요. 할머니 댁에서 같이 밥을 먹을 거예요.",
+    question: "무엇에 대한 이야기예요?",
+    answer: 0,
+    options: ["모임", "교통", "쇼핑", "여행"],
+    explain: "가족 모임이 있어요 directly indicates a gathering."
+  },
+  {
+    slot: 9,
+    id: "l9d",
+    type: "choice",
+    group: "[9~11] 다음을 듣고 <보기>와 같이 물음에 답하세요. (각 3점)",
+    example: "이 사람은 무엇을 먹었어요?\n어제 수진 씨를 만났어요. 밥을 먹었어요.\n① 밥 ② 펜 ③ 시계 ④ 바나나",
+    prompt: "9.",
+    audio: "저는 기분이 좋아요. 내일 고향 친구가 서울에 와요. 우리는 같이 점심을 먹고 공원에 갈 거예요.",
+    question: "이 사람은 왜 기분이 좋아요?",
+    answer: 1,
+    options: ["시험이 끝나서", "고향 친구가 와서", "옷이 싸서", "병원에 가서"],
+    explain: "고향 친구가 서울에 와요 explains the good mood."
+  },
+  {
+    slot: 10,
+    id: "l10d",
+    type: "choice",
+    prompt: "10.",
+    audio: "누리 씨는 집에서 지하철역까지 걸어서 가요. 지하철역에서 회사까지 지하철을 타고 가요.",
+    question: "누리 씨는 지하철역에서 회사까지 무엇을 타고 가요?",
+    answer: 2,
+    options: ["버스", "택시", "지하철", "자전거"],
+    explain: "지하철역에서 회사까지 지하철을 타고 가요 gives subway."
+  },
+  {
+    slot: 11,
+    id: "l11d",
+    type: "picture",
+    prompt: "11.",
+    audio: "세종학당은 은행 위에 있어요. 두 사람은 아래에 있어요.",
+    question: "알맞은 그림을 고르세요.",
+    answer: 2,
+    options: [
+      { text: "세종학당은 은행 왼쪽에 있어요.", image: "map-left" },
+      { text: "세종학당은 은행 오른쪽에 있어요.", image: "map-right" },
+      { text: "세종학당은 은행 위에 있어요.", image: "map-top" },
+      { text: "은행은 세종학당 위에 있어요.", image: "map-bottom" }
+    ],
+    explain: "세종학당은 은행 위에 있어요 matches the top map."
+  },
+  {
+    slot: 12,
+    id: "l12d",
+    type: "choice",
+    group: "[12~13] 다음을 듣고 <보기>와 같이 질문에 알맞은 대답을 고르세요. (각 3점)",
+    example: "남자: 수진 씨, 집에 가요?\n여자: 네. 집에 가요.\n수진 씨는 어디에 가요?\n① 집 ② 학교 ③ 식당 ④ 공원",
+    prompt: "12.",
+    audio: "남자: 마리 씨, 어디에 가요? 여자: 미용실에 가요. 머리를 자르려고 해요.",
+    question: "마리 씨는 어디에 가요?",
+    answer: 1,
+    options: ["약국", "미용실", "공항", "은행"],
+    explain: "미용실에 가요 gives the destination."
+  },
+  {
+    slot: 13,
+    id: "l13d",
+    type: "choice",
+    prompt: "13.",
+    audio: "여자: 어제 형에게 전화했어요. 형 생일이어서 축하했어요.",
+    question: "여자는 누구에게 전화했어요?",
+    answer: 0,
+    options: ["형", "선생님", "친구", "동생"],
+    explain: "형에게 전화했어요 means she called her older brother."
+  },
+  {
+    slot: 14,
+    id: "l14d",
+    type: "choice",
+    group: "[14~15] 다음을 듣고 <보기>와 같이 들은 내용과 같은 것을 고르세요. (각 5점)",
+    example: "남자: 어제 수진 씨를 만났어요?\n여자: 네. 같이 밥을 먹었어요.\n① 남자는 식당에 갔어요. ② 여자는 수진 씨를 만났어요. ③ 남자는 수진 씨를 좋아해요. ④ 여자는 수진 씨와 같이 왔어요.",
+    prompt: "14.",
+    audio: "남자: 저는 제주도가 고향이에요. 지금은 서울에 살아요. 다음 달에 가족을 만나러 제주도에 갈 거예요.",
+    question: "들은 내용과 같은 것을 고르세요.",
+    answer: 3,
+    options: ["남자는 서울이 고향이에요.", "남자는 지금 제주도에 살아요.", "남자는 어제 가족을 만났어요.", "남자는 다음 달에 제주도에 갈 거예요."],
+    explain: "다음 달에 ... 제주도에 갈 거예요 directly matches option 4."
+  },
+  {
+    slot: 15,
+    id: "l15d",
+    type: "choice",
+    prompt: "15.",
+    audio: "여자: 오늘 기분이 좋아요. 시험이 끝났고 친구하고 맛있는 저녁을 먹을 거예요.",
+    question: "들은 내용과 같은 것을 고르세요.",
+    answer: 1,
+    options: ["여자는 오늘 기분이 나빠요.", "여자는 친구하고 저녁을 먹을 거예요.", "여자는 내일 시험이 있어요.", "여자는 혼자 집에서 쉴 거예요."],
+    explain: "친구하고 맛있는 저녁을 먹을 거예요 matches option 2."
+  }
+];
+
+const READING_VERSION_4_ITEMS = [
+  {
+    slot: 1,
+    id: "r1d",
+    type: "choice",
+    group: "[1~3] <보기>와 같이 (   )에 들어갈 가장 알맞은 것을 고르세요. (각 3점)",
+    example: "(     )을 먹어요.\n① 펜 ② 빵 ③ 책상 ④ 선물",
+    prompt: "1.",
+    question: "고향 친구에게 (     )했어요.",
+    answer: 2,
+    options: ["운동", "가방", "전화", "김치찌개"],
+    explain: "친구에게 전화했어요 means called a friend."
+  },
+  {
+    slot: 2,
+    id: "r2d",
+    type: "choice",
+    prompt: "2.",
+    question: "머리가 길어요. 그래서 미용실에 (     ).",
+    answer: 3,
+    options: ["입어요", "마셔요", "아파요", "가려고 해요"],
+    explain: "Going to a hair salon fits long hair."
+  },
+  {
+    slot: 3,
+    id: "r3d",
+    type: "choice",
+    prompt: "3.",
+    question: "시험이 끝났어요. 그래서 기분이 아주 (     ).",
+    answer: 0,
+    options: ["좋아요", "매워요", "짧아요", "비싸요"],
+    explain: "기분이 좋아요 means feeling good."
+  },
+  {
+    slot: 4,
+    id: "r4d",
+    type: "choice",
+    group: "[4~6] <보기>와 같이 (   )에 알맞은 것을 고르세요. (각 3점)",
+    example: "밥(     ) 먹어요.\n① 이 ② 을 ③ 에게 ④ 까지",
+    prompt: "4.",
+    question: "오늘은 바빠요. (     ) 내일 전화할게요.",
+    answer: 1,
+    options: ["그리고", "그래서", "하지만", "보다"],
+    explain: "그래서 connects the reason to the result."
+  },
+  {
+    slot: 5,
+    id: "r5d",
+    type: "choice",
+    prompt: "5.",
+    question: "서울(     ) 제주도가 더 따뜻해요.",
+    answer: 2,
+    options: ["까지", "부터", "보다", "에게"],
+    explain: "보다 marks comparison: warmer than Seoul."
+  },
+  {
+    slot: 6,
+    id: "r6d",
+    type: "choice",
+    prompt: "6.",
+    question: "친구를 만나(     ) 카페에 가요.",
+    answer: 0,
+    options: ["러", "보다", "까지", "에게"],
+    explain: "-러 가요 means go in order to do something."
+  },
+  {
+    slot: 7,
+    id: "r7d",
+    type: "choice",
+    group: "[7~8] 무엇에 대한 이야기예요? <보기>와 같이 알맞은 것을 고르세요. (각 3점)",
+    example: "오늘은 수요일이에요. 그리고 내일은 목요일이에요.\n① 장소 ② 생일 ③ 친구 ④ 요일",
+    prompt: "7.",
+    question: "저는 머리가 짧아요. 동생은 키가 커요. 어머니는 안경을 써요.",
+    answer: 2,
+    options: ["음식", "교통", "외모", "고향"],
+    explain: "Hair, height, and glasses are appearance details."
+  },
+  {
+    slot: 8,
+    id: "r8d",
+    type: "choice",
+    prompt: "8.",
+    question: "저는 부산 사람이에요. 지금은 서울에 살지만 가족은 부산에 있어요.",
+    answer: 3,
+    options: ["모임", "건강", "쇼핑", "고향"],
+    explain: "부산 사람이에요 and family in Busan point to hometown."
+  },
+  {
+    slot: 9,
+    id: "r9d",
+    type: "choice",
+    group: "[9~11] 다음을 읽고 <보기>와 같이 물음에 답하세요. (각 3점)",
+    example: "이 사람은 무엇을 먹었어요?\n어제 수진 씨를 만났어요. 밥을 먹었어요.\n① 밥 ② 펜 ③ 시계 ④ 바나나",
+    prompt: "9.",
+    question: "이 사람은 언제 전화해요?",
+    passage: "오늘은 수업이 많아서 바빠요. 수업이 끝난 후에 어머니에게 전화할 거예요. 그리고 집에 가서 쉴 거예요.",
+    answer: 2,
+    options: ["아침 전에", "점심 전에", "수업이 끝난 후", "집에 가기 전"],
+    explain: "수업이 끝난 후에 ... 전화할 거예요 gives the time."
+  },
+  {
+    slot: 10,
+    id: "r10d",
+    type: "choice",
+    prompt: "10.",
+    question: "이 사람은 어디에서 가족을 만나요?",
+    passage: "이번 주말에 가족 모임이 있어요. 할머니 댁에서 가족을 만나요. 우리는 같이 밥을 먹고 사진을 찍을 거예요.",
+    answer: 1,
+    options: ["학교", "할머니 댁", "회사", "미용실"],
+    explain: "할머니 댁에서 가족을 만나요 is stated directly."
+  },
+  {
+    slot: 11,
+    id: "r11d",
+    type: "choice",
+    prompt: "11.",
+    question: "이 사람은 왜 기분이 좋아요?",
+    passage: "오늘 시험이 끝났어요. 그리고 친구에게 예쁜 선물을 받았어요. 그래서 기분이 좋아요.",
+    answer: 0,
+    options: ["시험이 끝나고 선물을 받아서", "병원에 가서", "일이 많아서", "비가 와서"],
+    explain: "시험이 끝났고 선물을 받았기 때문에 기분이 좋아요."
+  },
+  {
+    slot: 12,
+    id: "r12d",
+    type: "choice",
+    group: "[12~15] 다음을 읽고 <보기>와 같이 맞는 것을 고르세요.",
+    example: "저는 흐엉이에요. 베트남 사람이에요.\n① 베트남에 가요. ② 한국 사람이에요. ③ 한국 친구를 만나요. ④ 이 사람은 흐엉이에요.",
+    prompt: "12.",
+    question: "건물 안내",
+    passage: "4층 미용실\n3층 병원, 약국\n2층 카페, 서점\n1층 은행, 우체국\n지하 1층 주차장",
+    answer: 1,
+    options: ["미용실은 삼 층에 있어요.", "병원과 약국은 같은 층에 있어요.", "우체국은 지하에 있어요.", "카페는 일 층에 있어요."],
+    explain: "3층 has both 병원 and 약국."
+  },
+  {
+    slot: 13,
+    id: "r13d",
+    type: "choice",
+    prompt: "13.",
+    question: "다음을 읽고 맞는 것을 고르세요.",
+    passage: "저는 대구가 고향이에요. 지금은 서울에서 한국어를 공부해요. 다음 달 방학에 대구에 가서 가족을 만날 거예요. 어머니하고 시장에도 갈 거예요.",
+    answer: 2,
+    options: ["이 사람은 서울이 고향이에요.", "이 사람은 지금 대구에서 공부해요.", "이 사람은 다음 달에 가족을 만날 거예요.", "이 사람은 어머니하고 병원에 갈 거예요."],
+    explain: "다음 달 ... 가족을 만날 거예요 is stated directly."
+  },
+  {
+    slot: 14,
+    id: "r14d",
+    type: "choice",
+    prompt: "14.",
+    question: "다음을 읽고 맞는 것을 고르세요.",
+    passage: "어제 친구하고 옷을 사러 갔어요. 저는 파란색 셔츠를 샀어요. 친구는 검은색 모자를 샀어요. 셔츠는 조금 비쌌지만 아주 마음에 들어요.",
+    answer: 0,
+    options: ["이 사람은 파란색 셔츠를 샀어요.", "친구는 신발을 샀어요.", "셔츠는 아주 쌌어요.", "이 사람은 혼자 쇼핑했어요."],
+    explain: "저는 파란색 셔츠를 샀어요 is stated directly."
+  },
+  {
+    slot: 15,
+    id: "r15d",
+    type: "choice",
+    prompt: "15.",
+    question: "다음을 읽고 맞는 것을 고르세요.",
+    passage: "오늘 저녁에 모임이 있어요. 저는 음식을 준비하려고 해요. 친구들은 음료수를 살 거예요. 모임 후에는 같이 노래를 부를 거예요.",
+    answer: 3,
+    options: ["모임은 내일 아침이에요.", "이 사람은 음료수를 살 거예요.", "친구들은 음식을 준비해요.", "모임 후에 노래를 부를 거예요."],
+    explain: "모임 후에는 같이 노래를 부를 거예요 matches option 4."
+  }
+];
+
+const LISTENING_QUESTION_SLOTS = buildQuestionSlots(LISTENING_QUESTIONS, [...LISTENING_VARIANT_ITEMS, ...LISTENING_VERSION_4_ITEMS]);
+const READING_QUESTION_SLOTS = buildQuestionSlots(READING_QUESTIONS, [...READING_VARIANT_ITEMS, ...READING_VERSION_4_ITEMS]);
 
 function buildQuestionSlots(baseQuestions, variants) {
   const slots = baseQuestions.map((question) => [question]);
@@ -2751,8 +3177,8 @@ function buildQuestionSlots(baseQuestions, variants) {
 
 function getChoiceQuestions(part) {
   const slots = part === "listening" ? LISTENING_QUESTION_SLOTS : READING_QUESTION_SLOTS;
-  const seed = state.examSeeds?.[part] || 1;
-  return slots.map((slot, index) => slot[Math.floor(seededValue(`${seed}-${part}`, index) * slot.length) % slot.length]);
+  const version = getExamVersion();
+  return slots.map((slot) => slot[version % slot.length]);
 }
 
 const WRITING_PROMPTS = [
@@ -2890,6 +3316,34 @@ const WRITING_VARIANT_ITEMS = [
     box: "여러분은 어떤 음식을 좋아해요? 왜 좋아해요? 어디에서 자주 먹어요?",
     model: "저는 비빔밥을 좋아해요. 맛있고 건강해서 학교 근처 식당에서 자주 먹어요.",
     keywords: ["음식", "좋아", "맛있", "자주", "먹", "식당", "왜"]
+  },
+  {
+    slot: 1,
+    prompt: "시험이 (          ) 기분이 좋아요. (9점)",
+    accepted: ["끝나서", "끝났어서"],
+    model: "시험이 끝나서 기분이 좋아요.",
+    hint: "Use -아/어서 for cause and result."
+  },
+  {
+    slot: 2,
+    prompt: "수업이 끝난 후에 어머니에게 (          ). (9점)",
+    accepted: ["전화할 거예요", "전화하려고 해요", "전화해요"],
+    model: "수업이 끝난 후에 어머니에게 전화할 거예요.",
+    hint: "Use a future plan or intention."
+  },
+  {
+    slot: 3,
+    prompt: "다음 달에 고향에 가요. 고향에서 가족을 (          ). (12점)",
+    accepted: ["만날 거예요", "만나려고 해요", "만나요"],
+    model: "다음 달에 고향에 가요. 고향에서 가족을 만날 거예요.",
+    hint: "Use -(으)ㄹ 거예요 for a future plan."
+  },
+  {
+    slot: 4,
+    prompt: "다음을 읽고 40~60자로 글을 쓰세요. (20점)",
+    box: "여러분의 고향은 어디예요? 고향은 어때요? 고향에서 누구를 만날 거예요?",
+    model: "제 고향은 대구예요. 대구는 서울보다 따뜻해요. 방학에 가족을 만날 거예요.",
+    keywords: ["고향", "서울보다", "따뜻", "가족", "만날", "거예요", "방학"]
   }
 ];
 
@@ -2973,6 +3427,46 @@ const SPEAKING_VARIANT_ITEMS = [
     seconds: 60,
     model: "저는 비빔밥을 좋아해요. 맛있고 건강해서 학교 근처 식당에서 자주 먹어요.",
     keywords: ["한국", "음식", "좋아해요", "맛있", "자주", "먹어요", "식당", "왜"]
+  },
+  {
+    slot: 1,
+    id: "s1d",
+    number: "1.",
+    prompt: "(OO 씨는) 요즘 기분이 어때요? 왜 그래요? (9점)",
+    max: 9,
+    seconds: 30,
+    model: "요즘 기분이 좋아요. 시험이 끝나서 친구를 자주 만나요.",
+    keywords: ["기분", "좋아요", "나빠요", "시험", "끝나서", "친구", "만나요"]
+  },
+  {
+    slot: 2,
+    id: "s2d",
+    number: "2.",
+    prompt: "수업이 끝난 후에 누구에게 전화해요? 무슨 이야기를 해요? (9점)",
+    max: 9,
+    seconds: 30,
+    model: "수업이 끝난 후에 어머니에게 전화해요. 오늘 공부 이야기를 해요.",
+    keywords: ["수업", "끝난", "후에", "어머니", "친구", "전화해요", "이야기"]
+  },
+  {
+    slot: 3,
+    id: "s3d",
+    number: "3.",
+    prompt: "고향은 어디예요? 고향은 서울보다 어때요? (12점)",
+    max: 12,
+    seconds: 45,
+    model: "제 고향은 대구예요. 대구는 서울보다 조금 따뜻하고 음식이 맛있어요.",
+    keywords: ["고향", "서울보다", "따뜻", "추워요", "음식", "맛있어요", "예요"]
+  },
+  {
+    slot: 4,
+    id: "s4d",
+    number: "4.",
+    prompt: "앞으로 무엇을 할 거예요? 어디에 갈 거예요? 누구를 만날 거예요? 1분 동안 이야기하세요. (20점)",
+    max: 20,
+    seconds: 60,
+    model: "다음 달에 고향에 갈 거예요. 고향에서 가족을 만나고 맛있는 음식을 먹을 거예요.",
+    keywords: ["앞으로", "다음", "갈 거예요", "고향", "가족", "만나고", "먹을 거예요"]
   }
 ];
 
@@ -2991,18 +3485,20 @@ function buildPromptSlots(basePrompts, variants, offset) {
 }
 
 function getWritingPrompts() {
-  return selectPromptSlots(WRITING_PROMPT_SLOTS, state.examSeeds?.writing || 1).slice(0, 4);
+  return selectPromptSlots(WRITING_PROMPT_SLOTS).slice(0, 4);
 }
 
 function getSpeakingPrompts() {
-  return selectPromptSlots(SPEAKING_PROMPT_SLOTS, state.examSeeds?.speaking || 1);
+  return selectPromptSlots(SPEAKING_PROMPT_SLOTS);
 }
 
-function selectPromptSlots(slots, seed) {
-  return slots.map((slot, index) => slot[Math.floor(seededValue(`${seed}-prompt`, index) * slot.length) % slot.length]);
+function selectPromptSlots(slots) {
+  const version = getExamVersion();
+  return slots.map((slot) => slot[version % slot.length]);
 }
 
 const DEFAULT_STATE = {
+  examVersion: 0,
   part: "listening",
   index: 0,
   startedAt: {},
@@ -3091,18 +3587,21 @@ function bindEvents() {
   els.newVariationButton.addEventListener("click", () => {
     const part = state.part;
     if (part === "listening" || part === "reading") {
+      state.examVersion = nextExamVersion();
       state.examSeeds[part] = createExamSeed(part);
       state.choiceOrders[part] = {};
       state.answers[part] = Array(SECTION_CONFIG[part].count).fill(null);
       state.checked[part] = Array(SECTION_CONFIG[part].count).fill(null);
     }
     if (part === "writing") {
+      state.examVersion = nextExamVersion();
       state.examSeeds.writing = createExamSeed("writing");
       state.answers.writing = ["", "", "", ""];
       state.checked.writing = Array(4).fill(null);
       state.writingModels = Array(4).fill(false);
     }
     if (part === "speaking") {
+      state.examVersion = nextExamVersion();
       state.examSeeds.speaking = createExamSeed("speaking");
       state.answers.speaking = ["", "", "", "", ""];
       state.checked.speaking = Array(5).fill(null);
@@ -3154,7 +3653,9 @@ function activatePart(part, startTimer) {
 function startNewExam() {
   stopRecognition();
   speakingStatusMessage = "";
+  const nextVersion = nextExamVersion();
   state = createFreshState();
+  state.examVersion = nextVersion;
   state.examSeeds = freshExamSeeds();
   localStorage.removeItem(STORAGE_KEY);
   activatePart("listening", true);
@@ -3167,6 +3668,14 @@ function createFreshState() {
 function scrollExamIntoView() {
   if (!els.examLayout) return;
   els.examLayout.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function getExamVersion() {
+  return Number.isInteger(state.examVersion) ? state.examVersion % EXAM_VERSION_COUNT : 0;
+}
+
+function nextExamVersion() {
+  return (getExamVersion() + 1) % EXAM_VERSION_COUNT;
 }
 
 function freshExamSeeds() {
@@ -3197,7 +3706,7 @@ function startTicker() {
 function render() {
   const config = SECTION_CONFIG[state.part];
   els.answerPanelTitle.textContent = config.panel;
-  els.paperPartLabel.textContent = config.title;
+  els.paperPartLabel.textContent = `${config.title} · Version ${getExamVersion() + 1} / ${EXAM_VERSION_COUNT}`;
   els.timerLabel.textContent = config.timerLabel;
   els.paperIndexLabel.textContent = getIndexLabel();
   els.prevButton.disabled = state.part === "speaking" || state.part === "writing";
